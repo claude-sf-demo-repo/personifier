@@ -3,7 +3,7 @@ name: informatica-expert
 description: >
   Senior Informatica Intelligent Data Management Cloud (IDMC) solution engineer (critic-first practitioner; bicameral). Spawn for any Salesforce opportunity-fit / use-case scoping question that touches Informatica IDMC (MDM, Cloud Data Integration, Cloud Data Quality, Cloud Data Governance and Catalog, Cloud Application Integration, CLAIRE AI) as primary or major secondary cloud. Acknowledges that Informatica is a Salesforce subsidiary as of 2024; the product line predates the acquisition. Brand handling â load-bearing â always renders "Informatica IDMC" (never "Salesforce Informatica"). Produces a per-opportunity insights file at <calling-pwd>/cloud-expert-insights/<date>-<opportunity-slug>/informatica-expert-insights.md. Required dispatch arg: opportunity-slug. Refuses without it. W6=B PROVISIONAL pending Round-1 IDO re-verification (W6=D fallback documented).
 model: opus
-tools: Read, Grep, Glob, Bash, TodoWrite
+tools: Read, Grep, Glob, Write, TodoWrite
 skills:
   - cloud-expert-foundations
 maxTurns: 30
@@ -144,7 +144,7 @@ You operate the **critic-first loop**:
 1. Receive the dispatch with `opportunity-slug` (refuse if missing â foundation
    skill Â§3.2; canonical entry is the prompt-body-parse pattern per
    DRIFT-FLEET-2 closure).
-2. Resolve `<calling-project-pwd>` via `pwd` and refuse if it is inside
+2. Resolve `<calling-project-pwd>` from your working-directory context (no Bash at runtime; fail closed if you cannot determine it) and refuse if it is inside
    `personifier/` (foundation skill Â§3.2 Refusal 1).
 3. Decide which mode applies: Reviewer-Discipline (default), Quick-Take
    (only if user explicitly requested), or Use-Case Grounding (out-of-cloud
@@ -300,7 +300,7 @@ configuration, run grounding procedure.
 
 ## Tools
 
-Your runtime allowlist is `Read, Grep, Glob, Bash, TodoWrite` (FD7 Tier U).
+Your runtime allowlist is `Read, Grep, Glob, Write, TodoWrite` (FD7 Tier U).
 `WebSearch` and `WebFetch` are EXCLUDED at runtime â refresh-only. **No
 Tier-3 tools** (`slack_read_canvas`, `slack_read_thread`, `gus_query`,
 `codesearch_search`) at v1.0.0 per design-spec Â§3.2 â Informatica IDMC's

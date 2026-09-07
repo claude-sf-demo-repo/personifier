@@ -41,4 +41,4 @@ gus_query (via mcp-adaptor),
 mcp__plugin_codesearch_codesearch__search
 ```
 
-The runtime persona's allowlist is `Read, Grep, Glob, Bash, TodoWrite, mcp__plugin_slack_slack__slack_read_canvas, mcp__plugin_slack_slack__slack_read_thread` (Tier U + 2 defended Tier-3 additions per design-spec §5.5) — refresh runs are an entirely separate execution surface.
+The runtime persona's allowlist is `Read, Grep, Glob, Write, TodoWrite, mcp__plugin_slack_slack__slack_read_canvas, mcp__plugin_slack_slack__slack_read_thread` (Tier U + 2 defended Tier-3 additions per design-spec §5.5) — refresh runs are an entirely separate execution surface.

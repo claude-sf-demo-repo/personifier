@@ -5,7 +5,7 @@
 ## Synthesized spectrum (per FD7)
 
 ```
-Tier U (runtime universal): Read, Grep, Glob, Bash, TodoWrite
+Tier U (runtime universal): Read, Grep, Glob, Write, TodoWrite
 Tier 3 (runtime opt-in):    NOT enabled at v1.0.0 (re-evaluated quarterly)
 Tier R (refresh-time):      see refresh/tiered-schedules.md "Tool tiering (per FD7)"
 ```

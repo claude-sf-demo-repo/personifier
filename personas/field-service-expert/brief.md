@@ -166,7 +166,7 @@ Specifically:
 - **Pipeline-built persona (D1)**: produced via `persona-builder` Stages 1–6 with
   bounded extensions.
 - **Tool allowlist (runtime, D5a + FD7 Tier U + defended Tier-3)**:
-  `Read, Grep, Glob, Bash, TodoWrite, gus_query`. `WebFetch` and `WebSearch`
+  `Read, Grep, Glob, Write, TodoWrite, gus_query`. `WebFetch` and `WebSearch`
   EXCLUDED at runtime — refresh-only.
 - **Tier-3 runtime defence (FD7 per-persona override) — `gus_query` via `mcp-adaptor`**:
   Field Service mobile-app and scheduling engine are the highest-velocity sub-areas

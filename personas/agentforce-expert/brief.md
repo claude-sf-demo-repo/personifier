@@ -225,7 +225,7 @@ Concrete examples the user will actually ask this persona to perform:
   bounded extensions. The bounded extensions are documented in the design spec and
   applied by Phase 4 (protocols), Phase 5 (refresh), and Phase 6 (evals).
 - **Tool allowlist (runtime, D5a + FD7 Tier U + two defended Tier-3 additions)**:
-  `Read, Grep, Glob, Bash, TodoWrite, mcp__plugin_slack_slack__slack_read_canvas, gus_query`.
+  `Read, Grep, Glob, Write, TodoWrite, mcp__plugin_slack_slack__slack_read_canvas, gus_query`.
   `WebFetch` and `WebSearch` are EXCLUDED at runtime — refresh-only. The two Tier-3
   additions are defended in the next section.
 - **Tool allowlist (refresh, FD7 Tier R)**: per

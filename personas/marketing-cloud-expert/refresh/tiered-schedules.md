@@ -41,7 +41,7 @@ gus_query (via mcp-adaptor),
 mcp__plugin_codesearch_codesearch__search
 ```
 
-The runtime persona's allowlist (Tier U) is `Read, Grep, Glob, Bash, TodoWrite`
+The runtime persona's allowlist (Tier U) is `Read, Grep, Glob, Write, TodoWrite`
 — refresh runs are an entirely separate execution surface. Tier 3 is NOT
 enabled at v1.0.0 per design-spec §3.2 D5b.
 

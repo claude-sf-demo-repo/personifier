@@ -18,7 +18,7 @@ The authoritative refresh-cadence file. `refresh/schedule.md` is a thin pointer 
 
 ## Tool tiering (per FD7)
 
-All four tiers run with Tier R (refresh-time wide allowlist). The runtime persona's allowlist (Tier U + defended Tier-3) is `Read, Grep, Glob, Bash, TodoWrite, mcp__plugin_codesearch_codesearch__search, gus_query` — refresh runs are an entirely separate execution surface.
+All four tiers run with Tier R (refresh-time wide allowlist). The runtime persona's allowlist (Tier U + defended Tier-3) is `Read, Grep, Glob, Write, TodoWrite, mcp__plugin_codesearch_codesearch__search, gus_query` — refresh runs are an entirely separate execution surface.
 
 ## W6=D explicit-empty guards
 

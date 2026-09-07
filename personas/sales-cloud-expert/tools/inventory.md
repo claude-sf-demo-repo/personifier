@@ -4,7 +4,7 @@
 
 ## Synthesized inventory (Tier U runtime)
 
-The runtime allowlist is `Read, Grep, Glob, Bash, TodoWrite` per FD7 Tier U. This is enforced in `agent.md`'s frontmatter `tools:` line. No Tier-3 tools enabled at v1.0.0.
+The runtime allowlist is `Read, Grep, Glob, Write, TodoWrite` per FD7 Tier U. This is enforced in `agent.md`'s frontmatter `tools:` line. No Tier-3 tools enabled at v1.0.0.
 
 ## Refresh-time inventory (Tier R)
 

@@ -63,14 +63,13 @@ Implements `references/insights-frontmatter-schema.md` (mirror of the canonical 
 
 ### 3.1 Resolve the calling project's working directory
 
-At the **start** of every dispatch, before any other work:
+At the **start** of every dispatch, before any other work, determine the calling
+project's working directory from your runtime context — the working directory Claude
+Code reports for this dispatch. Save it as `<calling-project-pwd>`.
 
-```bash
-# Run via the Bash tool
-pwd
-```
-
-Save the result as `<calling-project-pwd>`. Do NOT use `personifier/` paths.
+Runtime cloud-experts do **not** have the `Bash` tool (SEC-5); do not attempt to shell
+out for `pwd`. If you cannot determine the working directory with confidence, **refuse
+(fail closed)** rather than guess a path. Do NOT use `personifier/` paths.
 
 ### 3.2 Refusal conditions (run in order)
 
@@ -103,9 +102,14 @@ Where:
 - `<opportunity-slug>` is the kebab-case dispatch arg.
 - `<cloud-slug>` is the persona's own slug (e.g. `sales-cloud-expert`).
 
-Create the per-opportunity directory if it does not exist.
+The Write tool creates the per-opportunity directory automatically when it writes the
+file (§3.4); you do not create it separately.
 
 ### 3.4 Write the file
+
+Write the insights file at the path constructed in §3.3 using the **Write tool**.
+Runtime cloud-experts have `Write`, not `Bash` (SEC-5) — never write via a shell heredoc
+or any Bash command. The Write tool creates any missing parent directories.
 
 The frontmatter has these required fields, in this order:
 
@@ -240,7 +244,7 @@ Citation discipline applies to writing this skill produces too — including ins
 ## 8. Common mistakes
 
 - **Editing `slack-channel-ledger.yaml` from `agent.md` Stage 6 assembly.** The persona-builder hand-off prompt forbids it; if the file appears regenerated, surface as a build failure.
-- **Writing insights files inside `personifier/`.** Always resolve via `pwd` at start of dispatch; refuse if the result is inside `personifier/`.
+- **Writing insights files inside `personifier/`.** Always resolve the working directory from your runtime context at start of dispatch; refuse if the result is inside `personifier/`.
 - **Skipping the no-proposals line.** A missing refresh-log file is indistinguishable from "persona never ran". Always create the dated file.
 - **Inline-citing from training-data intuition for last-24-month claims.** Trigger the grounding procedure instead.
 - **Bumping `last_material_change_at` on routine chatter.** It is a freshness signal that drives router decisions; reserve it for changes that would alter `knowledge.md` on a future dispatch.

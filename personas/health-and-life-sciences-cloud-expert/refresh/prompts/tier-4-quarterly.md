@@ -59,7 +59,7 @@ fi
 5. **Tier-3 runtime allowlist re-evaluation** (Cautious-first; D2 = B; v1.0.0 = NONE):
    - Confirm: NO Tier-3 tools were silently added to runtime allowlist
      during the quarter (`agent.md` `tools:` line is still
-     `Read, Grep, Glob, Bash, TodoWrite`).
+     `Read, Grep, Glob, Write, TodoWrite`).
    - If any Tier-3 tool is proposed for inclusion, the proposal is
      surfaced to the user with **explicit sign-off required** —
      Cautious-first posture + clinical-decision risk + HIPAA exposure

@@ -42,7 +42,7 @@ mcp__plugin_codesearch_codesearch__search
 ```
 
 The runtime persona's allowlist (Tier U + the two defended Tier-3 additions) is
-`Read, Grep, Glob, Bash, TodoWrite, mcp__plugin_slack_slack__slack_read_canvas, gus_query`
+`Read, Grep, Glob, Write, TodoWrite, mcp__plugin_slack_slack__slack_read_canvas, gus_query`
 — refresh runs are an entirely separate execution surface. **T4 quarterly
 re-evaluates whether the two Tier-3 runtime additions are still defended-needed**
 per the brief's Tier-3 defence section.

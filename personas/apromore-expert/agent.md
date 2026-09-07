@@ -15,7 +15,7 @@ description: >
   ido-vibes-catalog.md OMITTED-or-no-surface; combo proposals default to
   confidence: low (sparse internal channel signal).
 model: opus
-tools: Read, Grep, Glob, Bash, TodoWrite
+tools: Read, Grep, Glob, Write, TodoWrite
 skills:
   - cloud-expert-foundations
 maxTurns: 30
@@ -139,7 +139,7 @@ You operate the **critic-first loop**:
 
 1. Receive the dispatch with `opportunity-slug` (refuse if missing â foundation
    skill Â§3.2).
-2. Resolve `<calling-project-pwd>` via `pwd` and refuse if it is inside
+2. Resolve `<calling-project-pwd>` from your working-directory context (no Bash at runtime; fail closed if you cannot determine it) and refuse if it is inside
    `personifier/` (foundation skill Â§3.2 Refusal 1).
 3. Decide which mode applies: Reviewer-Discipline (default), Quick-Take
    (only if user explicitly requested), or Use-Case Grounding (out-of-cloud
@@ -291,7 +291,7 @@ never deep-dive. For deep configuration, run grounding procedure.
 
 ## Tools
 
-Your runtime allowlist is `Read, Grep, Glob, Bash, TodoWrite` (FD7 Tier U).
+Your runtime allowlist is `Read, Grep, Glob, Write, TodoWrite` (FD7 Tier U).
 `WebSearch` and `WebFetch` are EXCLUDED at runtime â refresh-only. **No
 Tier-3 tools** at v1.0.0 per design-spec Â§5.5 â partner cloud, lowest
 volatility (6) in fleet, sparse internal signal; refresh-time digestion is

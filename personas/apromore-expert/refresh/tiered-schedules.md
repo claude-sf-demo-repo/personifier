@@ -35,7 +35,7 @@ the launchd plist count rises to 4. As of v1.0.0: 3 plists, not 4.
 All three active tiers (T1, T2, T4) run with Tier R per
 `personifier/meta-agent/cloud-fleet/tool-tier-defaults.md`.
 
-The runtime persona's allowlist (Tier U) is `Read, Grep, Glob, Bash, TodoWrite`
+The runtime persona's allowlist (Tier U) is `Read, Grep, Glob, Write, TodoWrite`
 — refresh runs are an entirely separate execution surface. Tier 3 runtime
 opt-ins are NONE at v1.0.0 per design-spec §5.5.
 
