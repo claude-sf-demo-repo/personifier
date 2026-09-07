@@ -1,15 +1,35 @@
 ---
 description: Run a scheduled refresh on an existing persona's knowledge base
-argument-hint: <persona-slug>
+argument-hint: <persona-slug> [--tier=t1|t2|t3|t4]
 ---
 
 The user has invoked `/refresh-persona` with argument: "$ARGUMENTS".
+
+**Parse the arguments first.** `$ARGUMENTS` is `<persona-slug>` optionally followed by
+`--tier=tN`:
+
+- The **slug** is the first whitespace-delimited token. Validate it against
+  `^[a-z][a-z0-9-]+$`; refuse if it does not match.
+- The optional **`--tier=tN`** token (N ∈ {1,2,3,4}) selects a cloud-fleet tiered refresh.
+  It is passed by the launchd cron jobs (`launchd-generator.sh`). If absent, run the generic
+  refresh below.
 
 If "$ARGUMENTS" is empty, list available personas by running:
 `ls /Users/abogdan/Desktop/projects/personifier/personas/`
 and ask the user which one to refresh.
 
-Otherwise, the slug is "$ARGUMENTS". Run the refresh:
+### Tiered path (`--tier=tN` present)
+
+The persona is a cloud-fleet persona. Do NOT run the generic researcher prompt below.
+Instead read `personas/<slug>/refresh/prompts/tier-<N>-*.md` (daily/weekly/monthly/quarterly)
+and follow that per-tier prompt exactly — it encodes the tier's scope, tool tier (Tier R per
+`meta-agent/cloud-fleet/tool-tier-defaults.md`), and writeback discipline. Then surface any
+flags as in step 4. The tier prompts are authoritative for fleet personas; the generic path
+below applies only when no `--tier` is given.
+
+### Generic path (no `--tier`)
+
+The slug is the parsed first token. Run the refresh:
 
 1. Read `/Users/abogdan/Desktop/projects/personifier/personas/$ARGUMENTS/refresh/schedule.md`
    to confirm the persona exists and understand its cadence + volatility rating.
