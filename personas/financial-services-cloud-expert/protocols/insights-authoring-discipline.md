@@ -45,7 +45,7 @@ Per foundation skill §3.4. The FSC-specific overlay:
    skills / KYC/AML patterns / Customer-360 for advisors. Each linked to
    entries in `./dev-doc-links.md`. Sub-vertical callouts mandatory: every
    sub-section names the sub-vertical scope it addresses.
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    FSC-relevant rows are typically: FSC + Data 360 (financial customer-360),
    FSC + Agentforce (KYC document summarisation, action-plan recommender),
    FSC + Marketing Cloud for FSI, FSC + MuleSoft for core-banking

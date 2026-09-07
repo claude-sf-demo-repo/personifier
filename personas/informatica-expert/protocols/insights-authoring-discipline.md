@@ -39,7 +39,7 @@ Per foundation skill §3.4. The Informatica-IDMC-specific overlay:
    sub-section / B2B Data Exchange (if relevant). Each linked to entries in
    `./dev-doc-links.md`. Brand naming preserves "Informatica IDMC" — never
    "Salesforce Informatica" per `./citation-discipline.md`.
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    Informatica-IDMC-relevant rows: Informatica + Data 360 (canonical FD8
    partner-cloud post-acquisition combo — golden records feeding unified
    profile, zero-copy connectivity, governance hand-off), Informatica +

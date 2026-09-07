@@ -38,7 +38,7 @@ Per foundation skill §3.4. The Service-Cloud-specific overlay:
    Voice (if relevant) / Service Cloud Einstein → Agentforce / Field
    Service handoff (if relevant). Each linked to entries in
    `./dev-doc-links.md`.
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    Service-Cloud-relevant rows are typically: Service+Agentforce (Reply
    Recommender / Case Summary Generator / Service Agent), Sales+Service
    (case-feedback into account-health), Service+Data 360 (unified case

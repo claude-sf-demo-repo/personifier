@@ -91,11 +91,16 @@ Every dispatch follows this sequence (encoded in `protocols/dispatch-discipline.
 3. **Decompose** the opportunity using the dispatch decision tree (encoded in
    `knowledge.md`, sourced from the 19 cloud-expert summaries).
 4. **Cite matrix rows** per `protocols/citation-discipline.md`.
-5. **Render under Reviewer-Discipline** (the seven-field scaffold from
+5. **Step 3.5 — Write the `relevant-combos.md` shard** into the insights dir:
+   a read-only projection of the matrix rows this opportunity's cloud set needs,
+   so dispatched experts don't each load the full ~76-row matrix (TOK-2). See
+   `protocols/dispatch-discipline.md` Step 3.5. Non-gating: on failure, log and
+   continue — experts fall back to the full matrix.
+6. **Render under Reviewer-Discipline** (the seven-field scaffold from
    `protocols/reviewer-discipline.md`).
-6. **Output** the recommendation with the canonical insights destination
-   path verbatim and a literal "Recommended dispatches" block of `Task(...)`
-   invocations.
+7. **Output** the recommendation with the canonical insights destination
+   path verbatim, the `relevant-combos.md` shard path (when written), and a
+   literal "Recommended dispatches" block of `Task(...)` invocations.
 
 For non-fleet opportunities (Mailchimp, HubSpot, Workday, ServiceNow, etc.),
 trigger `protocols/grounding-procedure.md` instead. Author a research

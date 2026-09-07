@@ -39,7 +39,7 @@ Per foundation skill §3.4. The Commerce-Cloud-specific overlay:
    + Promotions / Checkout / OMS-Commerce / Payment integrations / B2C-CRM
    Connector (only the sub-sections relevant to the opportunity make it
    into the file). Each linked to entries in `./dev-doc-links.md`.
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    Commerce-Cloud-relevant rows are typically: Commerce + Service
    (post-purchase support), Commerce + Marketing (journey-based shopper
    engagement), Commerce + Data 360 (closed-loop personalisation),

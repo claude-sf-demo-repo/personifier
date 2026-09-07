@@ -116,6 +116,47 @@ and secondary cloud(s).
 Per `citation-discipline.md`, cite ≥ 1 matrix row that supports the
 recommendation; cite weaker rows under §4 Evidence against if any.
 
+### Step 3.5 — Write the per-opportunity combo shard (TOK-2)
+
+The router is the fleet's sole matrix owner and the dispatch chokepoint, so it
+is the natural place to project the matrix down to just the rows this
+opportunity needs. This spares every dispatched cloud-expert from loading the
+full ~76-row `cloud-combo-matrix.md` (~6.9k tok) at runtime just to write the
+"Common combos" section of its insights file.
+
+After decomposition (Step 2) has identified the primary + secondary cloud set,
+write the matched matrix rows into a **read-only projection** inside the
+insights dir created at Step 0:
+
+```
+<pwd-output>/cloud-expert-insights/<YYYY-MM-DD>-<opportunity-slug>/relevant-combos.md
+```
+
+Procedure:
+
+1. Select every row from `cloud-combo-matrix.md` whose Primary **or** Secondary
+   cloud(s) intersect the identified cloud set (the same rows you cite in
+   Step 3 plus any adjacent rows a dispatched expert would plausibly cite).
+   Include a row when in doubt — the shard is an optimization, not a filter on
+   correctness.
+2. Write the shard with the **exact matrix header** (`Combo name | Primary
+   cloud(s) | Secondary cloud(s) | Trigger signature | Pattern doc URL | Last
+   validated | Confidence`) followed by the selected rows verbatim, so an
+   expert citing from it produces the same citation it would from the matrix.
+3. Prepend a provenance block naming the opportunity, the source matrix, the
+   generation date, and the router version, plus this line verbatim:
+   `Projection of cloud-combo-matrix.md — READ-ONLY. Do not edit; do not file
+   proposals here. The canonical matrix remains router-owned.`
+
+The shard is a convenience projection: it is **not** an insights file and
+**not** a combo proposal. Experts fall back to the full matrix when the shard
+is absent (e.g. an expert dispatched directly without the router), so a missing
+or partial shard never costs combo coverage — see foundation skill §3.4.
+
+If the shard write fails, log it and continue — the recommendation still
+renders and experts fall back to the full matrix. A shard-write failure is NOT
+a dispatch gate (unlike the Step 0 mkdir).
+
 ### Step 4 — Render under Reviewer-Discipline
 
 Per `reviewer-discipline.md`. Seven fields, in order. End with §6 Decision
@@ -135,12 +176,19 @@ The full output message ALWAYS includes (in order):
    line) is in effect — the calling agent is responsible for the same
    fallback if needed.
 
+When a `relevant-combos.md` shard was written at Step 3.5, note its path in the
+§6 Decision alongside the insights destination path so the calling agent (and
+the dispatched experts) know it exists.
+
 ## What the router NEVER outputs
 
 - An insights file. The router is meta; it does not author insights. (FD5
-  contract is for cloud-experts.)
+  contract is for cloud-experts.) The `relevant-combos.md` shard (Step 3.5) is
+  NOT an insights file — it is a read-only projection of the matrix and is the
+  only artifact the router writes into the insights dir.
 - A combo proposal. The router merges proposals at T4; it never originates
-  them. (FD8 contract is for cloud-experts.)
+  them. (FD8 contract is for cloud-experts.) The shard is not a proposal
+  surface; nothing is ever filed into it.
 - A direct edit to `cloud-combo-matrix.md` outside the T4 sweep or an explicit
   user "Update matrix manually" instruction.
 - A non-canonical insights destination path. The path shape is fixed:

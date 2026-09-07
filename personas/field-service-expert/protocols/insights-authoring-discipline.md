@@ -50,7 +50,7 @@ Per foundation skill §3.4. The Field-Service-specific overlay:
      Product Request, Product Transfer, Product Consumed, Inventory
      Location, parts-required scheduling.
    Each linked to entries in `./dev-doc-links.md`.
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    Field-Service-relevant rows are typically: Field Service + Service
    (case-to-work-order), Field Service + Energy & Utilities
    (outage-response dispatch), Field Service + Manufacturing

@@ -68,7 +68,7 @@ Per foundation skill §3.4. The E&U-Cloud-specific overlay:
    it addresses (and explicitly notes when the term means different
    things across electric / gas / water — AMI, outage, service
    connection).
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    E&U-Cloud-relevant rows are typically: E&U + Field Service
    (load-bearing), E&U + Agentforce, E&U + Data 360, E&U + Mulesoft
    (meter-data integration), E&U + Marketing Cloud (customer

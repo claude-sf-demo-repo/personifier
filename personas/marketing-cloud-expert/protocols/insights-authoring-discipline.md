@@ -56,7 +56,7 @@ Per foundation skill §3.4. The Marketing-Cloud-specific overlay:
      Time Optimisation, Engagement Frequency, Copy Insights, Content
      Selection.
    Each linked to entries in `./dev-doc-links.md`.
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    Marketing-Cloud-relevant rows are typically: Marketing + Data 360
    (FD8 canonical — unified profile activation), Marketing + Sales (Lead
    handoff from journeys), Marketing + Service (case-deflection feedback

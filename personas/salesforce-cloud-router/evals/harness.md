@@ -70,6 +70,29 @@
      `grounding/executions/<YYYY-MM-DD>-non-fleet-mailchimp-hubspot.md`).
    - Verify: the router does NOT render a route under reviewer-discipline.
 
+7. **Run the S11 verification** (TOK-2 relevant-combos shard production):
+
+   - Reuse the S10 dispatch (slug `test-opp` from `/tmp/router-eval-s10/`), or
+     any multi-cloud opportunity from `prompts/router-smoke.md`.
+   - Verify on disk that the router wrote the shard alongside the insights dir:
+     ```bash
+     ls -la /tmp/router-eval-s10/cloud-expert-insights/<YYYY-MM-DD>-test-opp/relevant-combos.md
+     ```
+   - Verify shard **content**:
+     - Carries the exact matrix header row (`Combo name | Primary cloud(s) | ...
+       | Confidence`).
+     - Contains only rows whose primary/secondary intersect the opportunity's
+       identified cloud set, copied verbatim from `cloud-combo-matrix.md` (no
+       fabricated rows; each row must exist in the canonical matrix).
+     - Includes the verbatim provenance line: `Projection of
+       cloud-combo-matrix.md — READ-ONLY. Do not edit; do not file proposals
+       here. The canonical matrix remains router-owned.`
+   - Verify the §6 Decision in the router response names the shard path.
+   - Non-gating nuance: if the router legitimately finds NO matching rows for a
+     genuinely single-cloud opportunity, an empty-but-headed shard (or an
+     explicit "no cross-cloud combos" note) is acceptable; a fabricated row is
+     not.
+
 ## Manual vs automated scoring
 
 The 7 Reviewer-Discipline fields are scored manually by a reviewer. The 3
@@ -85,16 +108,24 @@ router metas are scored programmatically:
   (auto): verify S9 verification produced the exact refusal message AND
   S10 verification produced the canonical destination dir on disk. Score:
   0 (neither) / 1 (one of two) / 2 (both).
+- **Relevant-combos shard production (S11)** (auto): verify the shard exists
+  with the correct header, only-matrix-backed rows, and the verbatim provenance
+  line. Score: 0 (no shard on a multi-cloud opportunity) / 1 (shard present but
+  malformed header/missing provenance, or contains a row not in the matrix) /
+  2 (well-formed shard, all rows matrix-backed, provenance line present).
 
 ## Pass / fail definition
 
 The harness PASSES if and only if:
 
-1. **All three S-criteria gates** pass:
+1. **All S-criteria gates** pass:
    - Routing accuracy: 5/5 opportunities routed correctly (per
      `prompts/router-smoke.md` "Expected route" sections).
    - S9: opportunity-slug refusal produces the exact refusal message.
    - S10: canonical destination dir pre-created on each successful dispatch.
+   - S11: a well-formed, matrix-backed `relevant-combos.md` shard is written for
+     each multi-cloud dispatch (TOK-2). A shard containing a row absent from the
+     canonical matrix fails the gate (fabrication).
 
 2. **Sum threshold**: rubric sum ≥ 16/20 across 10 fields.
 
@@ -145,6 +176,15 @@ Match expected refusal message? <yes/no>
 Dispatched with slug=test-opp from /tmp/router-eval-s10/.
 `ls /tmp/router-eval-s10/cloud-expert-insights/` → <output>
 Directory `<YYYY-MM-DD>-test-opp/` present? <yes/no>
+
+## S11 — relevant-combos shard production (TOK-2)
+
+Dispatched test-opp from /tmp/router-eval-s10/.
+`ls .../cloud-expert-insights/<YYYY-MM-DD>-test-opp/relevant-combos.md` → <output>
+Shard header correct? <yes/no>  Provenance line present? <yes/no>
+All rows present in canonical matrix (no fabrication)? <yes/no>
+§6 Decision names the shard path? <yes/no>
+Score: 0/1/2
 
 ## Grounding verification (6th prompt)
 

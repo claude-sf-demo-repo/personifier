@@ -73,7 +73,7 @@ Per foundation skill §3.4. The Communications-Cloud-specific overlay:
    Each linked to entries in `./dev-doc-links.md`. Sub-vertical
    callouts mandatory: every sub-section names the sub-vertical scope
    it addresses.
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    Comms-Cloud-relevant rows are typically: Comms + Sales (B2B
    enterprise quote-to-cash), Comms + Service (subscriber service
    journeys), Comms + Field Service (truck-roll / installation), Comms

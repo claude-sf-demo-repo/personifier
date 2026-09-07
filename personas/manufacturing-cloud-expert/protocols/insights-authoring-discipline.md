@@ -46,7 +46,7 @@ Per foundation skill §3.4. The Manufacturing-Cloud-specific overlay:
    the dealer-network PRM model differs; CPG manufacturers shift emphasis
    to Trade-Promotion-adjacent rebate patterns; aerospace adds regulatory
    posture (FAA / EASA / ITAR) which the persona DOES NOT scope here."
-4. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+4. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    Manufacturing-Cloud-relevant rows are typically: Mfg + Sales (account
    team alignment), Mfg + Service (post-sale entitlements), Mfg + Field
    Service (warranty/repair execution), Mfg + Revenue (CPQ for configured
