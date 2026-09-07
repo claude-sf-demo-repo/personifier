@@ -1,5 +1,12 @@
 # Cloud-Experts Fleet — Volatility Table
 
+> **Disambiguation.** This is the **fleet** table: fixed per-cloud ratings that drive the
+> T1/T2/T3/T4 tiered schedule. Do NOT confuse it with the generically-named
+> `meta-agent/pipeline/volatility-table.md`, which maps a rating band to a single cron
+> cadence for the generic persona-builder pipeline. (Physical rename to `fleet-tier-table.md`
+> is scheduled for the Phase 2 redesign; until then, always reference this file with its
+> `cloud-fleet/` path prefix.)
+
 Per-cloud volatility ratings on a 1–10 scale. Drives FD9 cadence per persona: any cloud rated ≥ 8 receives the full T1/T2/T3/T4 tiered schedule; lower-rated clouds may downgrade T1 to weekly skim or omit T3 (per-persona workshop confirms).
 
 | Cloud | Slug | Volatility | Has IDOs? | Has Vibes skills? | Notes |

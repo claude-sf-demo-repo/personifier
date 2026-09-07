@@ -1,5 +1,11 @@
 # Volatility rating → refresh cadence
 
+> **Disambiguation.** This is the **generic pipeline** table (rating band → single cron
+> cadence), the canonical source for the persona-builder pipeline. Do NOT confuse it with
+> the identically-named `meta-agent/cloud-fleet/volatility-table.md`, which is the fleet's
+> fixed per-cloud T1/T2/T3/T4 tier table. This file is the single source of truth for the
+> cadence mapping — `README.md` and `persona-builder.md` should reference it, not re-embed it.
+
 The researcher rates field volatility 1-10 in Round 1. Translate that rating into a
 cron schedule here. Err toward longer cadences when uncertain — it's cheap for the user
 to manually run `/refresh-persona` when something big happens, but weekly refreshes of
