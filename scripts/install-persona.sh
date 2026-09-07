@@ -12,6 +12,15 @@ if [[ $# -ne 1 ]]; then
 fi
 
 slug="$1"
+
+# Validate slug before it touches any path. Same kebab-case contract the router
+# enforces (dispatch-discipline.md): a leading lowercase letter, then lowercase
+# letters / digits / hyphens. Rejects path-traversal (e.g. ../../foo) and absolute paths.
+if [[ ! "${slug}" =~ ^[a-z][a-z0-9-]+$ ]]; then
+  echo "error: invalid slug '${slug}' — must match ^[a-z][a-z0-9-]+\$ (kebab-case)" >&2
+  exit 2
+fi
+
 project_root="/Users/abogdan/Desktop/projects/personifier"
 source_file="${project_root}/personas/${slug}/agent.md"
 target_dir="${HOME}/.claude/agents"

@@ -1,6 +1,6 @@
 # Monthly Insights Consolidation — Prompt
 
-Run via launchd on the 1st of each month at 10:13. Walks the calling project's `cloud-expert-insights/` tree, summarises insights from the previous calendar month into a consolidated file, and deletes the source files **except** any from the most recent week (last 7 days from the run date).
+Run via launchd on the 1st of each month at 10:13. Walks the calling project's `cloud-expert-insights/` tree, summarises insights from the previous calendar month into a consolidated file, and archives the source files (moves them into `archive/<YYYY-MM>/`) **except** any from the most recent week (last 7 days from the run date). This job never deletes.
 
 ## Invocation
 
@@ -17,8 +17,16 @@ You are running the monthly cloud-expert-insights consolidation job. The current
 The cron is registered against a specific project root. Read the env var `CLOUD_EXPERT_PROJECT_ROOT` (set by the launchd plist). If unset, abort with: "CLOUD_EXPERT_PROJECT_ROOT not set in launchd plist. Edit the plist or re-register."
 
 ```bash
-test -n "$CLOUD_EXPERT_PROJECT_ROOT" || { echo "CLOUD_EXPERT_PROJECT_ROOT not set"; exit 1; }
-test -d "$CLOUD_EXPERT_PROJECT_ROOT/cloud-expert-insights" || exit 0  # nothing to consolidate
+root="$CLOUD_EXPERT_PROJECT_ROOT"
+# SEC-3: hard guards before any destructive operation runs unattended.
+test -n "$root"                    || { echo "CLOUD_EXPERT_PROJECT_ROOT not set"; exit 1; }
+case "$root" in
+  /) echo "refusing: root is /"; exit 1 ;;
+  */personifier|*/personifier/*) echo "refusing: root inside personifier/"; exit 1 ;;
+esac
+[ "$root" = "$HOME" ] && { echo "refusing: root is \$HOME"; exit 1; }
+[ "${root#/}" = "$root" ] && { echo "refusing: root is not an absolute path"; exit 1; }
+test -d "$root/cloud-expert-insights" || exit 0  # nothing to consolidate
 ```
 
 ### Step 2 — Compute date boundaries
@@ -67,7 +75,7 @@ clouds-touched: <comma-sep list of unique cloud-slugs>
 - **Fit summary (one sentence per cloud):**
   - <cloud-slug>: <one-sentence claim from the insights file>
 - **Key combos cited:** <comma-sep list>
-- **Source files (now deleted):** <list of file paths>
+- **Source files (now archived under `archive/<YYYY-MM>/`):** <list of file paths>
 
 ### ... (one per opportunity directory in the month)
 
@@ -76,13 +84,21 @@ clouds-touched: <comma-sep list of unique cloud-slugs>
 If this is the consolidation for March/June/September/December, also note: "Router quarterly sweep eligible after this consolidation."
 ```
 
-### Step 5 — Delete source files
+### Step 5 — Archive source files (not `rm -rf`)
 
-For each opportunity directory whose date is in the consolidation window (`< retention_cutoff` AND `>= prev_month_first`):
+For each opportunity directory whose date is in the consolidation window (`< retention_cutoff` AND `>= prev_month_first`), **move** it into a dated archive rather than deleting it. An unattended job must not do an irreversible `rm -rf`; moving to `archive/<YYYY-MM>/` is reversible and auditable. `$dir` MUST be a single directory name (no `/`), obtained from the Step 3 `find` output — never a caller-supplied path.
 
 ```bash
-rm -rf "$CLOUD_EXPERT_PROJECT_ROOT/cloud-expert-insights/$dir"
+insights="$root/cloud-expert-insights"
+archive="$insights/archive/$prev_month"   # $prev_month = <YYYY-MM>
+mkdir -p "$archive"
+# $dir is a bare directory name from Step 3 (basename only). Guard it.
+case "$dir" in */*|..|.|"") echo "refusing suspicious dir: '$dir'"; continue ;; esac
+test -d "$insights/$dir" || continue
+mv "$insights/$dir" "$archive/"
 ```
+
+Old archives can be pruned manually; the job never deletes.
 
 ### Step 6 — Log result
 
@@ -94,6 +110,7 @@ Append to `$CLOUD_EXPERT_PROJECT_ROOT/cloud-expert-insights/.consolidation-log.m
 
 ### Hard constraints
 
-- NEVER delete files in `< retention_cutoff` window unless they are also in `>= prev_month_first` window. The retention safety guarantees that an opportunity active in the last week of the month survives at least one more cycle.
+- NEVER archive files in `< retention_cutoff` window unless they are also in `>= prev_month_first` window. The retention safety guarantees that an opportunity active in the last week of the month survives at least one more cycle.
+- NEVER `rm -rf`. This job only moves directories into `archive/<YYYY-MM>/`. Deletion of archives is a manual, human action.
 - NEVER edit `cloud-combo-matrix.md` from this prompt.
 - NEVER call any cloud-expert agent. This is a pure file-summarisation task.

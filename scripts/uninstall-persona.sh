@@ -11,6 +11,14 @@ if [[ $# -ne 1 ]]; then
 fi
 
 slug="$1"
+
+# Validate slug before it touches any path. A traversal slug like ../../foo would
+# otherwise resolve target_file outside ~/.claude/agents/ and rm a symlink there.
+if [[ ! "${slug}" =~ ^[a-z][a-z0-9-]+$ ]]; then
+  echo "error: invalid slug '${slug}' — must match ^[a-z][a-z0-9-]+\$ (kebab-case)" >&2
+  exit 2
+fi
+
 target_file="${HOME}/.claude/agents/${slug}.md"
 
 if [[ ! -L "${target_file}" ]]; then
