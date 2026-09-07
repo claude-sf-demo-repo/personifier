@@ -73,36 +73,19 @@ structure. Pick the slug yourself — lowercase, hyphen-separated, memorable (e.
 
 ### Stage 2 — Round 1 Deep Research
 
-Delegate to `persona-researcher` with the brief. This is the expansive, foundational
-sweep. Your delegation prompt must tell the researcher to cover:
+Delegate to `persona-researcher` with the brief for the expansive, foundational sweep.
+The researcher covers academic foundation, the questions the expert asks (of self /
+stakeholders / the world), methodology, leading practitioners, tool landscape, ancillary
+domains, current state of the field (2024-2026), and a 1-10 **field-volatility rating**
+(justified and evidenced — it drives the Stage 6 refresh cadence).
 
-- **Academic foundation** — top 3-5 programs globally, signature curricula, required
-  coursework, canonical textbooks (with authors + editions), seminal papers, required
-  theoretical frameworks.
-- **Questions the expert asks** — of themselves (reflective practice), of clients/stakeholders
-  (discovery), of the world (research agenda). These are the *cognitive moves* that
-  distinguish a pro from a competent amateur.
-- **Methodology & process** — how work actually gets done. Deliverables, critique rituals,
-  validation methods, failure modes the field has learned to avoid.
-- **Leading practitioners + institutions** — who the field looks to. Living + historic.
-- **Tool landscape** — the instruments of the trade. Don't buy the gap analysis yet;
-  that's Stage 5. Just enumerate what a leader uses.
-- **Ancillary domains** — adjacent fields a world-class practitioner must be conversant
-  in (per your horticulturist example: soil microbiology, plant pathology, climatology,
-  genetics, supply chain).
-- **Current state of the field (2024-2026)** — live debates, recent breakthroughs,
-  contested methods, emerging subspecialties.
-- **Field volatility** — how fast does this field change? Rate 1-10, justify the rating,
-  and point to evidence (publication velocity, tool churn, regulatory movement). This
-  rating drives the refresh cadence in Stage 6.
+Require **citations with URLs** for every non-trivial claim, findings written to
+`personas/<slug>/research/round-1.md`, and a `personas/<slug>/research/sources.md` listing
+every URL consulted (so Stage 4 and refresh can revisit them). Breadth over depth here —
+Stage 4 is where depth lives; budget 30-60 minutes.
 
-Require the researcher to return **citations with URLs** for every non-trivial claim and
-to write its findings to `personas/<slug>/research/round-1.md`. Also require a separate
-`personas/<slug>/research/sources.md` listing every URL consulted (so Stage 4 and refresh
-can revisit them).
-
-Use WebSearch and WebFetch in the researcher agent. Budget: 30-60 minutes of real research.
-Breadth over depth here — Stage 4 is where depth lives.
+Full delegation template + result-reading guidance:
+**[pipeline/stage-2-round-1-research.md](pipeline/stage-2-round-1-research.md)**.
 
 ### Stage 3 — Refinement
 
@@ -121,10 +104,12 @@ specific practitioners/schools/methods to center or exclude. Capture refinements
 
 ### Stage 4 — Round 2 Targeted Research
 
-Delegate to `persona-researcher` again, this time with the refinements as the focusing
-lens. This round is depth-not-breadth: deeply investigate the 3-8 specific things the
-user flagged. Output goes to `personas/<slug>/research/round-2.md`, with the updated
-source list merged into `sources.md`.
+Delegate to `persona-researcher` again with the refinements as the focusing lens — depth,
+not breadth: deeply investigate the 3-8 specific things the user flagged. Output goes to
+`personas/<slug>/research/round-2.md`; append (do not overwrite) new URLs to `sources.md`.
+
+Full delegation template + reconciliation guidance:
+**[pipeline/stage-4-round-2-research.md](pipeline/stage-4-round-2-research.md)**.
 
 ### Stage 5 — Tool discovery + gap filling
 
@@ -149,38 +134,28 @@ its inputs/outputs, and how the persona agent should invoke it.
 
 ### Stage 6 — Assembly + refresh scheduling
 
-Now you assemble the final persona agent yourself. Use `templates/agent.md` as the base.
-Populate:
+You assemble the final persona yourself — no delegation. Working from `templates/agent.md`,
+`templates/knowledge.md`, and `templates/schedule.md`, produce:
 
-- **frontmatter** — name, description (one line; used by other agents to decide when to
-  spawn this one), model (default `opus` for deep work, `sonnet` for higher-throughput
-  personas; ask the user if unsure), tools allowlist (compose from surveyed + scaffolded).
-- **system prompt body** — draws from: round-1 + round-2 findings, the "questions the
-  expert asks" list, methodology, ancillary domains, tone, non-goals. Write it as an
-  identity ("You are…") not a task list. Include explicit pointers to `knowledge.md`
-  for durable knowledge and to custom tools for domain capabilities.
+- `personas/<slug>/agent.md` — frontmatter (name, one-line description, model, tools
+  allowlist composed from surveyed + scaffolded) + an identity-shaped ("You are…") system
+  prompt drawn from round-1/round-2 findings, with explicit pointers to `knowledge.md` and
+  any custom tools.
+- `personas/<slug>/knowledge.md` — the distilled long-term memory: canonical references,
+  methodology summaries, key practitioners, a dated current-state snapshot, and an updates
+  log the refresh loop edits.
+- `personas/<slug>/refresh/schedule.md` — the refresh cadence.
 
-Write the agent to `personas/<slug>/agent.md`.
+Then run `scripts/install-persona.sh <slug>` to symlink the agent into `~/.claude/agents/`.
 
-Write a distilled, curated `personas/<slug>/knowledge.md` using `templates/knowledge.md`.
-This is the agent's long-term memory: canonical references, methodology summaries, key
-practitioners, current-state snapshot, and (critically) a "last updated" section the
-refresh loop will edit.
+**Refresh cadence.** Translate the researcher's volatility rating into a cron schedule
+using **[pipeline/volatility-table.md](pipeline/volatility-table.md)** — the single source
+of truth for the rating→cadence→cron mapping; do not re-embed it here. Register the refresh
+via `CronCreate` invoking `/refresh-persona <slug>`, and record the choice + justification
+in `personas/<slug>/refresh/schedule.md`.
 
-Run `scripts/install-persona.sh <slug>` to symlink the agent into `~/.claude/agents/`.
-
-**Refresh cadence.** Translate the researcher's volatility rating into a cron schedule:
-
-| Volatility | Fields | Cadence |
-|---|---|---|
-| 9-10 | AI/ML, cybersecurity, crypto, frontier biotech | Weekly |
-| 7-8 | Web dev, digital marketing, pharma regulatory | Bi-weekly |
-| 4-6 | Graphic design, architecture, clinical medicine, finance | Monthly |
-| 2-3 | Classical music theory, structural engineering, taxonomy | Quarterly |
-| 1 | Ancient languages, historical archaeology | Semi-annually |
-
-Register the refresh via `CronCreate`, invoking the `/refresh-persona <slug>` command.
-Record the schedule choice + justification in `personas/<slug>/refresh/schedule.md`.
+Full assembly checklist, sanity checks, and handoff-message shape:
+**[pipeline/stage-6-assembly.md](pipeline/stage-6-assembly.md)**.
 
 ### Stage 7 — Handoff
 
