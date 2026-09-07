@@ -19,6 +19,27 @@ CLAUDE_BIN="$(command -v claude || echo /usr/local/bin/claude)"
 
 mkdir -p "$LAUNCH_AGENTS"
 
+# XML-escape a string so it is safe to interpolate into a plist <string> element.
+# Order matters: & must be escaped first.
+xml_escape() {
+  local s="$1"
+  s="${s//&/&amp;}"
+  s="${s//</&lt;}"
+  s="${s//>/&gt;}"
+  s="${s//\"/&quot;}"
+  printf '%s' "$s"
+}
+
+# Reject any slug that is not strict kebab-case before it is used in a path or label.
+# Same contract the router enforces (dispatch-discipline.md).
+validate_slug() {
+  local slug="$1"
+  if [[ ! "$slug" =~ ^[a-z][a-z0-9-]+$ ]]; then
+    echo "error: invalid slug '$slug' — must match ^[a-z][a-z0-9-]+\$ (kebab-case)" >&2
+    return 2
+  fi
+}
+
 emit_plist() {
   local slug="$1"
   local tier="$2"     # 1, 2, 3, 4
@@ -77,6 +98,7 @@ XMLEOF
 
 emit_for_slug() {
   local slug="$1"
+  validate_slug "$slug" || return 2
   test -d "$PERSONA_ROOT/$slug" || { echo "Persona dir missing: $PERSONA_ROOT/$slug"; return 1; }
 
   # T1 daily 07:07 Mon-Fri
@@ -134,25 +156,38 @@ emit_consolidation() {
   local label="com.salesforce.cloud-expert.consolidation.${slug_safe}"
   local plist="$LAUNCH_AGENTS/${label}.plist"
 
+  # SEC-1: do NOT inline the prompt file's contents into the plist. The markdown
+  # contains <, >, &, backticks and $() that are neither shell-safe nor XML-safe.
+  # Pass the prompt file's absolute path and instruct the job to read+follow it.
+  local prompt_path="$CLOUD_FLEET/monthly-consolidation-prompt.md"
+  local prompt_arg="Read the file $prompt_path and follow its instructions exactly to run the monthly cloud-expert insights consolidation."
+
+  # Escape every value interpolated into the XML below.
+  local label_x project_root_x prompt_arg_x claude_bin_x
+  label_x="$(xml_escape "$label")"
+  project_root_x="$(xml_escape "$project_root")"
+  prompt_arg_x="$(xml_escape "$prompt_arg")"
+  claude_bin_x="$(xml_escape "$CLAUDE_BIN")"
+
   cat > "$plist" <<XMLEOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
   <key>Label</key>
-  <string>$label</string>
+  <string>$label_x</string>
   <key>EnvironmentVariables</key>
   <dict>
     <key>CLOUD_EXPERT_PROJECT_ROOT</key>
-    <string>$project_root</string>
+    <string>$project_root_x</string>
   </dict>
   <key>ProgramArguments</key>
   <array>
-    <string>$CLAUDE_BIN</string>
+    <string>$claude_bin_x</string>
     <string>-p</string>
     <string>--tools</string>
     <string>Read,Grep,Glob,Bash,Write</string>
-    <string>$(cat $CLOUD_FLEET/monthly-consolidation-prompt.md)</string>
+    <string>$prompt_arg_x</string>
   </array>
   <key>StartCalendarInterval</key>
   <dict>
