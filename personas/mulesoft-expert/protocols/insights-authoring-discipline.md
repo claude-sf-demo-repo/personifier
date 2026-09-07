@@ -46,7 +46,7 @@ Per foundation skill §3.4. The Mulesoft-specific overlay:
      Load-bearing for the integration-substrate scoping shape that
      dominates this persona's caseload.
    Each linked to entries in `./dev-doc-links.md`.
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    Mulesoft-relevant rows are typically: Mulesoft + Sales Cloud (Salesforce
    CRM connector + Pub/Sub API), Mulesoft + Data 360 (ingestion connectors
    + activation), Mulesoft + Agentforce (Mule APIs as Agentforce actions),

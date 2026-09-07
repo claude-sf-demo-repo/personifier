@@ -40,7 +40,7 @@ Per foundation skill §3.4. The Apromore-specific overlay:
    custom Apex, Flow audit-log streaming, case-id construction discipline,
    activity / timestamp normalisation. Each linked to entries in
    `./dev-doc-links.md`.
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    Apromore-relevant rows are typically: Apromore + Sales (opportunity-stage
    mining), Apromore + Service (case-lifecycle mining), Apromore + Flow
    (Flow audit-log mining), Apromore + Data 360 (event-log unification

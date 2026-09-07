@@ -26,7 +26,7 @@ All four tiers run with Tier R (refresh-time wide allowlist; see
 `personifier/meta-agent/cloud-fleet/tool-tier-defaults.md`).
 
 The runtime persona's allowlist (Tier U + 2 defended Tier-3 additions per
-design-spec §5.5) is `Read, Grep, Glob, Bash, TodoWrite,
+design-spec §5.5) is `Read, Grep, Glob, Write, TodoWrite,
 mcp__plugin_codesearch_codesearch__search, gus_query` — refresh runs are
 an entirely separate execution surface that adds the wider WebSearch /
 WebFetch / Slack-family / canvas / read-thread surface.

@@ -35,7 +35,7 @@ Per foundation skill §3.4. The Sales-Cloud-specific overlay:
    sub-sections**: Pipeline / Opportunity / Lead / Forecasting / Sales
    Engagement / Sales Cloud Einstein → Agentforce / Territory (if relevant).
    Each linked to entries in `./dev-doc-links.md`.
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    Sales-Cloud-relevant rows are typically: Sales + Revenue (CPQ /
    quote-to-cash), Sales + Service (case-deflection / warranty-claim
    handoff), Sales + Tableau (deal-velocity / forecast accuracy

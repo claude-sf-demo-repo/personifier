@@ -239,7 +239,7 @@ Concrete examples the user will actually ask this persona to perform:
 - **Pipeline-built persona (D1)**: produced via `persona-builder` Stages 1–6 with
   bounded extensions. The bounded extensions are documented in the design spec and
   applied by Phase 4 (protocols), Phase 5 (refresh), and Phase 6 (evals).
-- **Tool allowlist (runtime, D5a + FD7 Tier U)**: `Read, Grep, Glob, Bash, TodoWrite`.
+- **Tool allowlist (runtime, D5a + FD7 Tier U)**: `Read, Grep, Glob, Write, TodoWrite`.
   `WebFetch` and `WebSearch` are EXCLUDED at runtime — refresh-only. No Tier-3
   tools enabled at v1.0.0 (no defended need; Marketing Cloud's runtime work is
   opportunity scoping; re-evaluated quarterly per D5b).

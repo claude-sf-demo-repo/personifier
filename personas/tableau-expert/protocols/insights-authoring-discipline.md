@@ -38,7 +38,7 @@ Per foundation skill §3.4. The Tableau-specific overlay:
    360 integration (zero-copy / Iceberg) / Tableau Server (only when
    self-managed handoff is in scope) / Embedding API (only when embedded
    analytics is in scope). Each linked to entries in `./dev-doc-links.md`.
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    Tableau-relevant rows are typically: Tableau + Data 360 (FD8 canonical;
    zero-copy unified-data executive analytics), Tableau + Sales (executive
    dashboards / forecast accuracy), Tableau + Service (case analytics /

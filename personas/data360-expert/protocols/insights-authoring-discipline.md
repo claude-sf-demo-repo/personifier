@@ -48,7 +48,7 @@ Per foundation skill §3.4. The Data-360-specific overlay:
    mandatory for any opportunity with > 5M records — calls out
    match-rate degradation thresholds, ML-rerank trigger conditions,
    source-priority collision handling.
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    Data-360-relevant rows are typically: Data 360 + Agentforce (RAG over
    unified profile — FD8 canonical), Data 360 + Marketing Cloud
    (segment-driven personalisation), Data 360 + Sales / Service Cloud

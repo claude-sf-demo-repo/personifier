@@ -219,7 +219,7 @@ Specifically:
 - **Pipeline-built persona (D1)**: produced via `persona-builder` Stages 1–6
   with bounded extensions (chunked-dispatch pattern in Wave 3 Batch D
   short-circuits Stages 2–5; the inline executor authors all artefacts).
-- **Tool allowlist (runtime, D5a + FD7 Tier U)**: `Read, Grep, Glob, Bash, TodoWrite`.
+- **Tool allowlist (runtime, D5a + FD7 Tier U)**: `Read, Grep, Glob, Write, TodoWrite`.
   `WebFetch` and `WebSearch` are EXCLUDED at runtime — refresh-only. No
   Tier-3 tools enabled at v1.0.0 (no defended need; re-evaluated quarterly).
 - **Tool allowlist (refresh, FD7 Tier R)**: per `personifier/meta-agent/cloud-fleet/tool-tier-defaults.md`.

@@ -75,7 +75,7 @@ Per foundation skill §3.4. The Revenue-Cloud-specific overlay:
      changes. Reference billing-scheduler config snippets when D5b
      loosened limit applies.
    Each sub-section linked to entries in `./dev-doc-links.md`.
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    Revenue-Cloud-relevant rows are typically: Sales + Revenue (FD8
    canonical; quote-to-cash), Revenue + Service (entitlement-process
    integration / renewals), Revenue + Data 360 (customer-360 segments

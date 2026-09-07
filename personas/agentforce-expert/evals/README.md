@@ -32,7 +32,7 @@ Promotion is the user's call:
 5. Re-run the harness against the new prompt to baseline its expected
    score.
 
-## Three prompt classes
+## Prompt classes
 
 - `prompts/agentforce-gold.md` — north-star prompt; cross-cloud
   agent-platform opportunity scoping (S6).
@@ -40,6 +40,13 @@ Promotion is the user's call:
   feature-fit vignette list.
 - `prompts/approve-or-propose.md` — user-proposes-then-persona-decides
   flow (S7-adjacent; tests `compare-alternatives.md`).
+- `prompts/relevant-combos-shard.md` — TOK-2; two scenarios verifying the
+  persona cites combos from the per-opportunity `relevant-combos.md` shard when
+  present and falls back to the full `cloud-combo-matrix.md` when absent.
+- `prompts/conditional-protocol-trigger.md` — TOK-4; five scenarios verifying
+  that under conditional protocol loading each protocol still fires when its
+  trigger fires (quick-take / grounding / compare-alternatives / combo-cross-ref)
+  and that the always-on reviewer + citation floor holds with no trigger.
 
 A grounding-procedure smoke test (S7) is run as an out-of-rotation
 dispatch with an out-of-cloud prompt — Phase 7 Task 7.9 specifies the

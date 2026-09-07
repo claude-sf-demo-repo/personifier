@@ -49,7 +49,7 @@ Per foundation skill §3.4. The Agentforce-specific overlay:
    - **Testing harness** — `AiEvaluationDefinition` test specs planned;
      metric set; CI/CD integration plan.
    - Each linked to entries in `./dev-doc-links.md`.
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`.
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6).
    Agentforce-relevant rows are typically: Agentforce + Service (Service
    Agent), Agentforce + Sales (Sales Coach), Agentforce + Data 360 (RAG
    over unified profile), Agentforce + Marketing (campaign agent),

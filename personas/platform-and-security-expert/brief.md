@@ -223,7 +223,7 @@ NOT defended at v1.0.0: `slack_read_canvas`, `slack_read_thread` — those remai
 ## Constraints & integrations
 
 - **Pipeline-built persona (D1)**: produced via `persona-builder` Stages 1–6 with bounded extensions. The bounded extensions are documented in the design spec and applied by Phase 4 (protocols), Phase 5 (refresh), and Phase 6 (evals).
-- **Tool allowlist (runtime, D5a + FD7 Tier U + Tier-3 defended)**: `Read, Grep, Glob, Bash, TodoWrite, mcp__plugin_codesearch_codesearch__search, gus_query`. `WebFetch` and `WebSearch` are EXCLUDED at runtime — refresh-only. Tier-3 inclusions defended above.
+- **Tool allowlist (runtime, D5a + FD7 Tier U + Tier-3 defended)**: `Read, Grep, Glob, Write, TodoWrite, mcp__plugin_codesearch_codesearch__search, gus_query`. `WebFetch` and `WebSearch` are EXCLUDED at runtime — refresh-only. Tier-3 inclusions defended above.
 - **Tool allowlist (refresh, FD7 Tier R)**: per `personifier/meta-agent/cloud-fleet/tool-tier-defaults.md`. The four tier-prompt files at `refresh/prompts/tier-{1..4}-*.md` declare Tier R in their frontmatter.
 - **Coverage tiers (D3)**: Flagship / Solid / Ambient as listed under "Domain".
 - **Bicameral mode (D5)**: default = Reviewer-Discipline scaffold (`protocols/reviewer-discipline.md`); opt-in = Quick-Take (`protocols/quick-take.md`).

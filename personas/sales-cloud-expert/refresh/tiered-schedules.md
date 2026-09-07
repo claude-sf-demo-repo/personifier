@@ -40,7 +40,7 @@ gus_query (via mcp-adaptor),
 mcp__plugin_codesearch_codesearch__search
 ```
 
-The runtime persona's allowlist (Tier U) is `Read, Grep, Glob, Bash, TodoWrite`
+The runtime persona's allowlist (Tier U) is `Read, Grep, Glob, Write, TodoWrite`
 — refresh runs are an entirely separate execution surface.
 
 ## Slot collision check

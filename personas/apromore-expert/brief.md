@@ -222,7 +222,7 @@ Concrete examples the user will actually ask this persona to perform:
   bounded extensions. The bounded extensions are documented in the design spec
   and applied by Phase 4 (protocols), Phase 5 (refresh — three prompts only,
   T3 OMITTED), and Phase 6 (evals).
-- **Tool allowlist (runtime, D5a + FD7 Tier U)**: `Read, Grep, Glob, Bash, TodoWrite`.
+- **Tool allowlist (runtime, D5a + FD7 Tier U)**: `Read, Grep, Glob, Write, TodoWrite`.
   `WebFetch` and `WebSearch` are EXCLUDED at runtime — refresh-only.
   **Tier-3 tools: NONE at v1.0.0** — partner cloud, lowest volatility (6) in fleet,
   sparse internal signal; refresh-time digestion is sufficient. Re-evaluated at

@@ -53,7 +53,7 @@ Per foundation skill §3.4. The H&LS-specific overlay:
    skills / HIPAA-compliance patterns (pattern-naming only). Each linked
    to entries in `./dev-doc-links.md`. Sub-vertical callouts mandatory:
    every sub-section names the sub-vertical scope it addresses.
-3. **Common combos** — combos cited from `cloud-combo-matrix.md`. H&LS-
+3. **Common combos** — combos cited from the per-opportunity `relevant-combos.md` shard when present (else `cloud-combo-matrix.md`; see foundation skill §3.6). H&LS-
    relevant rows are typically: H&LS + Sales (life-sciences commercial),
    H&LS + Service (patient services / member services), H&LS + Data 360
    (unified patient-360 / member-360), H&LS + Agentforce (clinical summary,
