@@ -1,0 +1,94 @@
+# Manufacturing Cloud Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+# Seed values placeholder until T2 weekly refresh validates against actual workspace.
+
+channels:
+  - id: C01K1416ASC
+    name: help-sell-manufacturing-cloud
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-22T18:51:34Z"
+    last_material_change_summary: "**LOAD-BEARING REBRAND** (channel topic by Taskeen Singh): Manufacturing Cloud → Agentforce Manufacturing. Plus active Warranty Lifecycle Management vs ASLM vs Mfg Cloud vs Field Service feature-boundary thread (Uriel Dabby 5/22) — full Warranty under Mfg Cloud; warranty claims via ASLM; Service Parts Return ASLM slides 78-79."
+    notes: "Primary Manufacturing Cloud sell-side help channel. Resolved 2026-05-25 from seed-ledger placeholder name `manufacturing-cloud-help`. Tier-A by purpose=help-sell + cross-sub-vertical (industrial / automotive / CPG / aerospace) topical centrality."
+
+  - id: C01K734L5BP
+    name: industries-manufacturing
+    purpose: announcements
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-22T19:37:02Z"
+    last_material_change_summary: "Q2 FY27 Agentforce Manufacturing (Manufacturing Cloud) promos live 2026-05-19 → 2026-07-31: (1) Industry Cloud 15% Upgrade for Sales/Service EE/UE → Mfg Cloud equivalent; (2) Agentforce for Manufacturing (A4X) 3-license-2-month free trial (extended from Q1)."
+    notes: "Industries Manufacturing announcements + community channel. Resolved 2026-05-25 from seed-ledger placeholder name `manufacturing-cloud-announcements`. Topic redirects MFG Cloud questions to #help-sell-manufacturing-cloud. Tier-A by purpose=announcements + cross-sub-vertical reach."
+
+  - id: C-MFG-SE-PLACEHOLDER
+    name: manufacturing-se
+    purpose: sell
+    member_count: 800
+    member_count_checked_at: "2026-05-23T00:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-23T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "SE coordination channel. Tier-A override per foundation skill §1.4 — uniquely high-signal for sub-vertical disambiguation despite sell purpose."
+
+  - id: C-MFG-SALES-AGREEMENTS-PLACEHOLDER
+    name: sales-agreements
+    purpose: techsupport
+    member_count: 450
+    member_count_checked_at: "2026-05-23T00:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-23T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Feature-specific deep-help for sales agreements (run-rate vs new-business; renewal motions). Tier-B by member count."
+
+  - id: C-MFG-REBATE-PLACEHOLDER
+    name: rebate-management
+    purpose: techsupport
+    member_count: 380
+    member_count_checked_at: "2026-05-23T00:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-23T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Feature-specific deep-help for rebate programs / payouts. Tier-B."
+
+  - id: C-MFG-ACCOUNT-FORECASTS-PLACEHOLDER
+    name: account-forecasts
+    purpose: techsupport
+    member_count: 320
+    member_count_checked_at: "2026-05-23T00:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-23T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Feature-specific channel for Account-Based Forecasting (period configuration, revision cadence). Tier-B."
+
+  - id: C03U5ETT4BE
+    name: help-sell-automotive-cloud
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-21T10:12:46Z"
+    last_material_change_summary: "Agentforce Loan Simulation for Salesforce Automotive Cloud agent published to Services Central — three-tier Agentforce NLP + Salesforce Flow + Invocable Apex architecture. Caveat: implementation example, not OOTB Salesforce product."
+    notes: "Automotive Cloud sell-side help channel. Resolved 2026-05-25 from seed-ledger placeholder name `automotive-cloud`. Tier-B by cross-cloud-collision rule — Automotive Cloud expert may claim Tier-A in future. Mfg-Cloud-on-automotive signal flows here. Sub-vertical: automotive."
+
+  - id: C-MULESOFT-MFG-INT-PLACEHOLDER
+    name: mulesoft-mfg-integration
+    purpose: community
+    member_count: 400
+    member_count_checked_at: "2026-05-23T00:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-23T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Load-bearing for ERP-integration adjacency (SAP / Oracle / D365). Tier-B for Mfg; mulesoft-expert may claim Tier-A. Mfg signal density on integration-tax discussions."

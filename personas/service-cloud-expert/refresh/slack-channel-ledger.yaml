@@ -1,0 +1,120 @@
+# Service Cloud Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+#
+# Seed run: 2026-05-17 (Phase 3 Task 3.5; Wave 1.B service-cloud-expert).
+# Tier classification per foundation skill §1; member_count snapshots are
+# best-effort placeholders (Slack list_channel_members API caps at 30/page;
+# T3 monthly audit paginates to refine).
+
+channels:
+  - id: C01HN1VD6SD
+    name: help-sell-service-cloud
+    purpose: help
+    member_count: 30
+    member_count_checked_at: "2026-05-17T08:30:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:30:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Primary Service Cloud help-sell channel (created 2020-12-19, founder Clara Shih). Tier-A by purpose=help and direct topical alignment to opportunity-fit / cross-cloud combo questions. Paginated count pending T3 audit."
+
+  - id: C01PBKF9TCN
+    name: service-cloud-einstein-support
+    purpose: techsupport
+    member_count: 30
+    member_count_checked_at: "2026-05-17T08:30:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:30:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Service Cloud Einstein techsupport (created 2021-02-27). Tier-A by topical density to Flagship Service Cloud Einstein → Agentforce surface. Cross-fleet collision rule with agentforce-expert: service-cloud-expert claims Tier-A here because primary signal is Service-Cloud-bound AI (Reply Recommendations, Case Classification, Article Recommendations); agentforce-expert covers Agentforce-platform (Agent Script DSL, Builder topics). Reconciled at Wave 1.B exit."
+
+  - id: C05FY4QCA9M
+    name: support-swat-team-einstein-gpt-for-service
+    purpose: techsupport
+    member_count: 30
+    member_count_checked_at: "2026-05-17T08:30:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:30:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Einstein GPT for Service swat-team (created 2023-07-11). Tier-A by topical density on Agentforce Service Agent / Reply Recommender. Tracks Einstein → Agentforce Service Agent rebrand churn (R2 in design-spec §12)."
+
+  - id: C08D1UV6S0K
+    name: fy27-asa-service-cloud-einstein-and-gpt
+    purpose: announcements
+    member_count: 30
+    member_count_checked_at: "2026-05-17T08:30:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:30:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "FY27 ASA Service Cloud Einstein/GPT broadcast (created 2025-02-13). Tier-A by purpose=announcements and direct alignment with FY27 Service Cloud roadmap. T1 daily refresh starts here."
+
+  - id: C020AAU5DTJ
+    name: technical-omnichannel-routing
+    purpose: techsupport
+    member_count: 30
+    member_count_checked_at: "2026-05-17T08:30:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:30:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Technical Omnichannel Routing (created 2021-04-22). Tier-A by topical density to Flagship Omnichannel routing (Skill-Based Routing, Presence Statuses, Service Channels). Foundation-level signal channel for routing engineering and configuration."
+
+  - id: C03SYCK1411
+    name: scv-all
+    purpose: announcements
+    member_count: 30
+    member_count_checked_at: "2026-05-17T08:30:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:30:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Service Cloud Voice all-hands (created 2022-08-10). Tier-A by topical density to Solid Service Cloud Voice (Amazon Connect / Partner Telephony) — flagship-vs-solid boundary review pending (R2 in design-spec §12)."
+
+  - id: C01NVV8VB62
+    name: help-sell-salesforce-voice
+    purpose: help
+    member_count: 30
+    member_count_checked_at: "2026-05-17T08:30:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:30:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Help-sell channel for Salesforce Voice (created 2021-02-24, founder Zoe Sitrin). Tier-A by purpose=help. Cross-claim with Service Cloud Voice combo work (CCaaS / Amazon Connect deflection assessments)."
+
+  - id: C031JD2VD4Z
+    name: servicecloud-238-miaw-ga-gtm
+    purpose: announcements
+    member_count: 30
+    member_count_checked_at: "2026-05-17T08:30:00Z"
+    tier: B
+    last_checked_at: "2026-05-17T08:30:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Messaging for In-App and Web (MIAW) GA GTM (created 2022-02-02). Tier-B — release-vintage channel; topical density to Solid Digital channels surface. Re-evaluate at T4 quarterly; may downgrade once 238 release cycle is far in the past."
+
+  - id: C076JJUGTK9
+    name: core-prom-service-cloud-swarming-scrt-alerts
+    purpose: techsupport
+    member_count: 30
+    member_count_checked_at: "2026-05-17T08:30:00Z"
+    tier: B
+    last_checked_at: "2026-05-17T08:30:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Service Cloud SCRT/swarming alerts (created 2024-06-07). Tier-B — narrow but uniquely high-signal for known-issue surfacing during opportunity scoping. Cited when an opportunity flags a Service Cloud bug or escalation pattern."
+
+  - id: C01MCNZ1C3E
+    name: help-competitive-servicecloud
+    purpose: help
+    member_count: 30
+    member_count_checked_at: "2026-05-17T08:30:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:30:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Service Cloud competitive help (created 2021-02-06, founder Claire Ebben). Tier-A by purpose=help and direct alignment with `compare-alternatives.md` competitor frame (Zendesk, ServiceNow CSM, Freshdesk, Microsoft Dynamics 365 CS, Intercom)."

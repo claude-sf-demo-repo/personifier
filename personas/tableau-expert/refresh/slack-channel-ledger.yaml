@@ -1,0 +1,108 @@
+# Tableau Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+#
+# Status: 5 of 9 ledger placeholders resolved on 2026-05-25 first T1 daily refresh
+# via slack_search_channels. 4 entries (`tableau-server`, `tableau-prep`,
+# `einstein-discovery`, `tableau-data-cloud-integration`) kept PENDING.
+
+channels:
+  - id: C07L7VAJ136
+    name: help-tableau-next
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T04:00:00Z"
+    last_material_change_at: "2026-05-22T14:46:42Z"
+    last_material_change_summary: "Tableau Next OEM / standalone-deployment feasibility under review (Trinity consulting case 5/20 — Anne-Laure Richardson following up with product). Tableau-Slack Pulse-digest token-generation bug 5/21. D360 connector data-stream issue 5/21."
+    notes: "Primary Tableau Next help channel (covers Tableau Einstein / Tableau Next product line). Resolved 2026-05-25 from seed-ledger placeholder name `tableau-help`. Tier-A by purpose=help + topical centrality."
+
+  - id: C02RT1UBLBA
+    name: tab-help-tableau-cloud
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T04:00:00Z"
+    last_material_change_at: "2026-05-19T18:18:40Z"
+    last_material_change_summary: "New Tableau Cloud edition shipped 2026-05-20 (Noel Carter announcement; Agent in Pulse fka Enhanced Q&A GA). Redshift 2.X driver pod-by-pod rollout (UWC/10ax/UEC/PDCHA/etc. 5/21). Tableau Prep VC row-level data-policy bypass governance issue 5/22."
+    notes: "Tableau Cloud sales-and-migration help channel. Resolved 2026-05-25 from seed-ledger placeholder name `tableau-cloud-support`. Tier-A — release-cadence + Cloud-vs-Server disambiguation density."
+
+  - id: C03S3MN0H8U
+    name: tableau-product-all
+    purpose: announcements
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T04:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Tableau Product Team Announcements broadcast. Resolved 2026-05-25 from seed-ledger placeholder name `tableau-product`. Tier-A — release-train signals."
+
+  - id: C020A8NPFNE
+    name: crm-analytics-ask-the-experts
+    purpose: community
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T04:00:00Z"
+    last_material_change_at: "2026-05-20T04:57:58Z"
+    last_material_change_summary: "Summer 26 release CSP regression on image widgets requiring `*.force.com` trusted-URL workaround (Stanley K 5/20). CRMA Lens Compares Table column-rename revert (Jyoti Kumari 5/21 — BUGs marked closed but recurring)."
+    notes: "CRM Analytics ask-the-experts (pre-sales technical questions). Resolved 2026-05-25 from seed-ledger placeholder name `crm-analytics`. Tier-A — canonical for in-CRM analytics Flagship sub-field."
+
+  - id: C02R0BA59EZ
+    name: help-tableau-pulse-ai
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-26T04:00:00Z"
+    last_material_change_at: "2026-05-21T17:26:21Z"
+    last_material_change_summary: "Pulse data-wipe-during-refresh — execs see blank Pulse during morning refresh (Sarah Rubel 5/22). Pulse-on-Experience-Cloud sizing issue (mini/ban layouts 5/21). Confirmation: Slack Pulse digests universal across licenses; Agent in Pulse + Correlation Insight + Forecast Insight + Pace to Goal premium-only."
+    notes: "Pulse + Tableau AI help channel (covers Pulse, Tableau AI, Data Stories, Data Guide, Explain Data). Resolved 2026-05-25 from seed-ledger placeholder name `tableau-pulse`. Tier-B — promoted at T3 if rebrand-churn signal warrants (Enhanced Q&A → Agent in Pulse confirmed)."
+
+  - id: C-PLACEHOLDER-TABLEAU-SERVER
+    name: tableau-server
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Self-managed Server admin community. Tier-B because Server is Solid-tier (handoff territory) for tableau-expert. PENDING-T2 — 2026-05-25 first ID-resolution pass returned no clean canonical match; T2 retry with broader queries."
+
+  - id: C-PLACEHOLDER-TABLEAU-PREP
+    name: tableau-prep
+    purpose: community
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Prep authoring community. Note: #help-tableau-prep (C02RFV63XUZ) found but lower-priority match; T2 to verify and promote if Prep VC governance issue (5/22) recurs. PENDING-T2."
+
+  - id: C-PLACEHOLDER-EINSTEIN-DISCOVERY
+    name: einstein-discovery
+    purpose: community
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Einstein Discovery story integration with CRM Analytics; legacy Wave Analytics archaeology surfaces here. PENDING-T2 — 2026-05-25 first ID-resolution pass returned no clean canonical match; #crm-analytics-ask-the-experts already covers Einstein Discovery questions. T2 may retire this entry as redundant."
+
+  - id: C-PLACEHOLDER-TABLEAU-DATA-CLOUD-INTEGRATION
+    name: tableau-data-cloud-integration
+    purpose: community
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "FD8 canonical combo channel (Tableau + Data 360). tableau-expert claims Tier-B; data360-expert claims Tier-A primary. PENDING-T2 — 2026-05-25 first ID-resolution pass returned no clean canonical match; cross-fleet collision rule per design-spec §12 R3 unaffected."

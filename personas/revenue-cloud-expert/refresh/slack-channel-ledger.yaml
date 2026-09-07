@@ -1,0 +1,112 @@
+# Revenue Cloud Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+#
+# Status: 4 of 9 ledger placeholders resolved on 2026-05-25 first T1 daily refresh
+# via slack_search_channels. 5 entries PENDING. Active rebrand-drift signal:
+# CPQ → Agentforce Revenue Management migration workshop confirmed 2026-05-23.
+
+channels:
+  # === Legacy CPQ + Billing managed-package surface ===
+  - id: PLACEHOLDER-PENDING-T1
+    name: cpq-help
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Primary CPQ help channel covering legacy SteelBrick-derived CPQ managed package + CPQ + Billing managed packages. Tier-A by member count + help purpose. PENDING-T2 — 2026-05-25 first ID-resolution pass returned only #industries-cpq-dc-standard-apis-help (Industries CPQ — different surface) and small per-team channels; T2 retry with broader queries (`salesforce-cpq` / `rev-cpq-help` / `cpq-questions`)."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: cpq-announcements
+    purpose: announcements
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Broadcast channel for CPQ release announcements (legacy managed-package patches + modern unified release notes). Tracks rebrand-drift signal explicitly per design-spec §2.1. PENDING-T2 — 2026-05-25 first ID-resolution pass returned no clean canonical match; T2 retry."
+
+  - id: C026Y0ENETH
+    name: support-rev-billing
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-19T17:19:02Z"
+    last_material_change_summary: "Salesforce Billing payment-creation batch-size limit (max 70) — recurring customer support question (Mike Grabinski 5/19). Customer record-reconciliation procedure for ~40 record drift issue (Victoria Luc 5/19)."
+    notes: "Salesforce Billing managed-package swarm/techsupport channel. Resolved 2026-05-25 from seed-ledger placeholder name `salesforce-billing` (closer fit by techsupport-purpose vs. help). Tier-A — known-issue density + product-support traffic."
+
+  # === Subscription Management ===
+  - id: C0345C9FW65
+    name: support-rev-subscription-management
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Subscription Management product support channel (renewals / amendments / ramps / mid-term changes). Resolved 2026-05-25 from seed-ledger placeholder name `subscription-management` (closer fit by support-purpose vs. help). Tier-A — quiet this interval but canonical."
+
+  # === Modern unified Revenue Cloud surface ===
+  - id: C01GMHMNSJH
+    name: help-sell-revenue-cloud
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-22T20:39:34Z"
+    last_material_change_summary: "RCA sandbox-provisioning failure for 500-license Patterson deal (Michael Bradly 5/19). RCA license inclusion via Tableau Next Limited Consumers confirmed (Annie Wright 5/20). CPQ → Agentforce Revenue Management migration workshop (300+ regs, 70+ SI partners) — Partner Enablement assets posted 5/22. **Active rebrand drift signal: 'Agentforce Revenue Management' as canonical destination name.**"
+    notes: "Modern unified Revenue Cloud sell-side help channel. Resolved 2026-05-25 from seed-ledger placeholder name `revenue-cloud-help`. Distinct from #cpq-help (legacy managed packages); persona owns both per legacy-naming clarity discipline. Tier-A — load-bearing for rebrand drift + escalation surface."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: revenue-cloud-announcements
+    purpose: announcements
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Modern unified Revenue Cloud release announcements. Vibes-skill release announcements track here (Quote Risk Score Explainer, Discount Approval Helper). PENDING-T2 — 2026-05-25 first ID-resolution pass resolved #revenue-cloud (C022PAHNJKD) but no traffic; T2 retry for canonical announcements channel."
+
+  # === SE coordination + cross-functional ===
+  - id: PLACEHOLDER-PENDING-T1
+    name: cpq-se
+    purpose: sell
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Solution Engineer coordination channel. Tier-A by topical relevance even with sell purpose (foundation skill §1.4 override; CPQ SE channel is uniquely high-signal due to deal-desk-shaped patterns). PENDING-T2 — 2026-05-25 first ID-resolution pass resolved only narrow regional channels; T2 retry."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: quote-to-cash
+    purpose: community
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Cross-functional quote-to-cash discussions. Useful for cross-cloud surface signal (Sales + Revenue + Service entitlements). PENDING-T2 — 2026-05-25 first ID-resolution pass returned no clean canonical match; T2 retry."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: revenue-cloud-engineering
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Engineer-to-engineer techsupport for Revenue Cloud product team. Tier-B until member-count confirmed. PENDING-T2 — 2026-05-25 first ID-resolution pass returned no clean canonical match; T2 retry."

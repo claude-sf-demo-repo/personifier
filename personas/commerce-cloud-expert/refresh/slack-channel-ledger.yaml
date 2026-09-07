@@ -1,0 +1,135 @@
+# Commerce Cloud Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+# Sub-product overlay: each entry tagged b2c / b2b / d2c / cross per §5.7.
+#
+# Status: 6 of 10 ledger placeholders resolved on 2026-05-25 first T1 daily refresh
+# via slack_search_channels. 4 entries PENDING. D2C / B2C sell-side overlap noted
+# (`#help-sell-b2c-commerce` purpose says "selling D2C Commerce" — both sub-products
+# share the channel post-rebrand; T2 to reconcile).
+
+channels:
+  # === B2C Commerce ===
+  - id: C01S0PQ9B38
+    name: help-sell-b2c-commerce
+    sub_product: b2c
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-22T12:42:24Z"
+    last_material_change_summary: "WhatsApp Shopper Agent NOT supported today, on roadmap (Priyasha Mehta 5/19). Carl Zeiss Vision prospect using WhatsApp + ChatGPT/Gemini commerce protocols (Patrick Wolf 5/22)."
+    notes: "B2C Commerce sell-side help (post-rebrand purpose says 'selling D2C Commerce' — D2C and B2C share this channel; T2 to reconcile #d2c-commerce ledger entry). Resolved 2026-05-25 from seed-ledger placeholder name `b2c-commerce-help`. Tier-A by purpose=help-sell + topical centrality."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: sfra-cartridge-dev
+    sub_product: b2c
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "SFRA cartridge developer channel. Sub-product: B2C only. Tier-A by topical relevance + techsupport purpose. PENDING-T2 — 2026-05-25 first ID-resolution pass returned no clean canonical match; T2 retry (`b2c-commerce-dev` / `sfra-dev` / `commercecloud-developer`)."
+
+  - id: C01SJ8LA7NV
+    name: help-b2c-tech-headless
+    sub_product: b2c
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "B2C Commerce headless / SCAPI / commerce-API technical channel. Resolved 2026-05-25 from seed-ledger placeholder name `scapi`. Sub-product: B2C. PWA Kit and Composable Storefront discussions surface here. Tier-A — quiet this interval but canonical."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: einstein-commerce
+    sub_product: b2c
+    purpose: announcements
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "B2C Commerce Einstein → Agentforce-integrated AI channel. Sub-product: B2C. Vibes-skill release announcements track here. Tier-B until member-count confirmed. PENDING-T2 — 2026-05-25 first ID-resolution pass returned only patching/operations channels; T2 retry (`commerce-einstein` / `einstein-for-commerce`)."
+
+  # === B2B Commerce ===
+  - id: C01RSSYEBN3
+    name: help-sell-b2b-commerce
+    sub_product: b2b
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-22T10:43:06Z"
+    last_material_change_summary: "B2B Buyer Agent live; June release supports product discovery / cart management / checkout (deep-linked) / order management. WhatsApp support GA with text-only (no images). 262.8 patch (June 1st week) feature targeting. GEO support for B2B targeting Dreamforce release."
+    notes: "B2B Commerce sell-side help. Resolved 2026-05-25 from seed-ledger placeholder name `b2b-commerce-lightning` (closer fit by sell-side help-channel purpose). Sub-product: B2B. Tier-A — load-bearing for B2B Buyer Agent rollout + roadmap signal."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: b2b-commerce-help
+    sub_product: b2b
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Generic B2B Commerce help / community channel. Sub-product: B2B. PENDING-T2 — 2026-05-25 first ID-resolution pass returned candidate #help-b2b-commerce-functional (C01GMAKDDBM); T2 to validate."
+
+  # === D2C Commerce ===
+  - id: PLACEHOLDER-PENDING-T1
+    name: d2c-commerce
+    sub_product: d2c
+    purpose: community
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "D2C Commerce channel. Newest sub-product; lower member count keeps it Tier-B by default. Sub-product: D2C. May overlap with #b2b-commerce-lightning since D2C runs on B2B platform. PENDING-T2 — 2026-05-25 first ID-resolution pass found #help-sell-b2c-commerce explicitly handles D2C selling (rebrand overlap); T2 to reconcile entry."
+
+  # === Cross-cutting ===
+  - id: C01NGMJHHJ8
+    name: commercecloud-all
+    sub_product: cross
+    purpose: announcements
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-21T19:50:46Z"
+    last_material_change_summary: "B2C Commerce Roadmap Webinar 2026-05-22 (Karly Cyr; landing page returned error — pending fix). SLAS Passwordless Authentication / Passkey Login GA + OTP rate-limiting platform-level enhancement (June release; VF/Vans first-merchant 5/20). Success Architect wins: Nintendo TSOB token, Columbia CWV +60% speed-index, Build-A-Bear AEO Readiness (AI hallucinations for 2026 digital strategy), SANS Stripe-Japan, Picard performance."
+    notes: "Cross-sub-product release-announcements + community channel. Resolved 2026-05-25 from seed-ledger placeholder name `commerce-cloud-announcements`. Tier-A. Tracks B2C / B2B / D2C / OMS announcements + Success Architect wins."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: commerce-oms
+    sub_product: cross
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Salesforce Order Management Service channel. Cross-sub-product (OMS-Commerce integration relevant to B2C and B2B both). PENDING-T2 — 2026-05-25 first ID-resolution pass returned mostly study-group / project / per-customer channels; T2 retry (`commerce-cloud-oms` / `salesforce-oms`)."
+
+  - id: C02PLU6C63B
+    name: cc-se-global
+    sub_product: cross
+    purpose: sell
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-19T18:12:19Z"
+    last_material_change_summary: "SE Toolkit storefront updates 2026-05-19: QLabs Shopper Agent MIAW Deployments now work in Storefront Next (sparkle icon). Set Conversational Context via Site Preferences (Business Manager) — Storefront Next + Composable Storefront. Storefront Next + Claude Code / Cursor / Marketplace import experimentation cleanup advisory (5/22)."
+    notes: "Commerce Cloud SE global coordination. Resolved 2026-05-25 from seed-ledger placeholder name `commerce-cloud-se`. Tier-A by topical relevance even with sell purpose (foundation skill §1.4 override). Note: `#commerce-cloud-se` (C082ZSZ1PGF) also exists but has lower activity; #cc-se-global is canonical."

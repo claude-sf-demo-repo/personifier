@@ -1,0 +1,109 @@
+# Mulesoft (Anypoint Platform) Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+# Phase 3 Task 3.5 seed — 3 of 9 ledger placeholders resolved on 2026-05-25 first
+# T1 daily refresh via slack_search_channels. 6 entries PENDING. 1 new candidate
+# (#anypoint-mcp-server) flagged for T2 promotion.
+
+channels:
+  - id: PENDING-RESOLVE-RUNTIME
+    name: mulesoft
+    purpose: community
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: null
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Top-of-funnel Mulesoft channel; broad cross-Mulesoft signal. Tier-A by topical relevance. PENDING-T2 — 2026-05-25 first ID-resolution pass returned no clean canonical match."
+  - id: C07GW5V7JJ0
+    name: help-sell-mulesoft-and-flow
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-19T17:54:08Z"
+    last_material_change_summary: "Anypoint AI feature pricing/SKU clarification thread — 4 $0 SKUs for AI features on legacy core-based pricing; agent registry & scanner activation; 'private spaces' SKU mapping question (Shieh Yuan Ong). Mulesoft + Flow packaging confusion (Justin Klise) — customers forced to choose Anypoint or Flow per use case."
+    notes: "MuleSoft + Flow help-sell channel (one-stop-shop for Mulesoft resources, customer-journey + sales-process). Resolved 2026-05-25 from seed-ledger placeholder name `mulesoft-help`. Tier-A by purpose=help-sell + topical centrality."
+  - id: PENDING-RESOLVE-RUNTIME
+    name: mulesoft-anypoint-platform
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: null
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Anypoint Platform announcements + release-readiness discussion. Tier-A by topical relevance. PENDING-T2 — 2026-05-25 first ID-resolution pass returned only #cloudhub (legacy 2014) and topic-specific channels."
+  - id: PENDING-RESOLVE-RUNTIME
+    name: mulesoft-dataweave
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: null
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "DataWeave-specific help channel. Tier-A by topical relevance (Flagship sub-field). PENDING-T2 — 2026-05-25 first ID-resolution pass returned NO RESULTS; T2 retry with broader queries (`dataweave-help` / `mule-dataweave` / `mulesoft-dw`)."
+  - id: C0390TEPQUA
+    name: mulesoft-product-roadmap-help
+    purpose: community
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-21T19:57:19Z"
+    last_material_change_summary: "Headless MuleSoft for Slack and Claude — GA target 2026-05-27 (Jing Li). PoC-ready in lower envs now. Roadmap deck for MuleSoft on Hyperforce — current version needed (Philipp Wiegel 5/22 — only 'outdated' deck surfaced)."
+    notes: "Mulesoft product-roadmap Q&A channel. Resolved 2026-05-25 from seed-ledger placeholder name `mulesoft-anypoint-ai` (closer fit by roadmap-relevance for Anypoint AI surface; Anypoint AI is the most volatile sub-area per design-spec R1). Tier-A — load-bearing for product-team roadmap signal."
+  - id: C0ADUPL1XRT
+    name: mulesoft-acb-vibes-early-access
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Anypoint Code Builder + MuleSoft Vibes early-access channel (created 2026-02-10 by Mofeyi Oluwalana). Internal-stakeholder only. Resolved 2026-05-25 from seed-ledger placeholder name `mulesoft-code-builder`. Tier-A during 2026 ACB migration cycle. **W6=B-PROVISIONAL flip-guard signal: Vibes early-access channel is internal-stakeholder, NOT customer-facing — flip-guard NOT triggered.**"
+  - id: PENDING-RESOLVE-RUNTIME
+    name: mulesoft-announcements
+    purpose: announcements
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: null
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Broadcast channel for Mulesoft / Anypoint Platform release announcements. T1 daily refresh skim starts here. PENDING-T2 — 2026-05-25 first ID-resolution pass returned no clean canonical match."
+  - id: PENDING-RESOLVE-RUNTIME
+    name: mulesoft-se
+    purpose: sell
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: null
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Mulesoft sales engineering coordination. Tier-B by sell purpose; high-signal during opportunity scoping discussions. PENDING-T2 — 2026-05-25 first ID-resolution pass returned only narrow regional channels."
+  - id: PENDING-RESOLVE-RUNTIME
+    name: integration
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: null
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Cross-traffic with Salesforce-side integration personas (sf-integration / sf-apex). Tier-B per design-spec R3 cross-fleet collision rule. Cited only when Mulesoft-specific. PENDING-T2 — 2026-05-25 first ID-resolution pass returned only narrow Salesforce-side integration channels."
+  - id: C08MASS3E5V
+    name: anypoint-mcp-server
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Anypoint MCP Server discussion (open-source stub at github.com/MuleSoft-Global-Proserv-Consulting-emu/anypoint-mcp-server). NEW candidate added 2026-05-25 — surfaced via T1 channel discovery. Tier-B until member-count confirmed at T3. T2 should add to `dev-doc-links.md` MCP-server resources section."

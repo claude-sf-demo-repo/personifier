@@ -1,0 +1,147 @@
+# Salesforce Platform-and-Security Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Wave 2.B SPECIAL-SHAPE: themed-by-discipline (4 themes), NOT themed-by-cloud.
+# `theme:` field is first-class alongside `tier:`.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+
+channels:
+  # --- Theme 1: Salesforce Platform release-readiness ---
+  - id: C08K2N7PH89
+    name: release-readiness-comms-and-topicsubmissions-generalinfo
+    theme: theme-1
+    purpose: announcements
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Release-readiness PM topic-submission broadcast. Resolved 2026-05-25 from seed-ledger placeholder name `release-readiness`. Theme 1 anchor. Tier-A — broadcast cadence with PM topic submissions; quiet between cycles."
+  - id: C0PLATREL02
+    name: platform-release-announcements
+    theme: theme-1
+    purpose: announcements
+    member_count: 3100
+    member_count_checked_at: "2026-05-19T00:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Platform-wide release announcements; T1 daily skim entry point."
+  - id: C0PLATREL03
+    name: sandbox-preview
+    theme: theme-1
+    purpose: announcements
+    member_count: 1800
+    member_count_checked_at: "2026-05-19T00:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Sandbox preview window announcements; useful for release-readiness scoping."
+
+  # --- Theme 2: Salesforce Trust Foundations / Security ---
+  - id: C03E17ZRSHL
+    name: stp-announcements
+    theme: theme-2
+    purpose: announcements
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-22T21:28:41Z"
+    last_material_change_summary: "Email Domain Authentication Enforcement live 2026-05-21 for all new Hyperforce Commercial FI orgs + domains (DKIM or Authorized Email Domains required). LOAD-BEARING for Guardian Horizon Zero. 132 user stories shipped; 14 daily patch releases during R262."
+    notes: "Salesforce Trust Platform announcements. Resolved 2026-05-25 from seed-ledger placeholder name `salesforce-trust`. Theme 2 anchor (security advisories). Tier-A — security-incident + milestone broadcast surface."
+  - id: C0TRUST02
+    name: security-engineering
+    theme: theme-2
+    purpose: techsupport
+    member_count: 1500
+    member_count_checked_at: "2026-05-19T00:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Engineering-team security discussions; high-signal for SSDF + threat-model conversations."
+  - id: C0TRUST03
+    name: ssdf
+    theme: theme-2
+    purpose: community
+    member_count: 700
+    member_count_checked_at: "2026-05-19T00:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "SSDF compliance + audit conversations."
+
+  # --- Theme 3: General SE / engineering platform best-practices ---
+  - id: C01S3EK4VJ7
+    name: help-sell-platform
+    theme: theme-3
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-22T18:35:08Z"
+    last_material_change_summary: "Custom Object Pack ONLY via LPP (not Login and Dev / LPS). Force.com keepable in A1E but NOT for Agentforce — must upgrade to Platform Starter / Plus / Logins. Flex Credits contribute to most Trusted Services DPP products incl. Security Center. Open: unmetered Agentforce for LPP."
+    notes: "Salesforce Platform sell-side help channel. Resolved 2026-05-25 from seed-ledger placeholder name `se-platform`. Theme 3 anchor (SE platform best-practices). Tier-A by purpose=help-sell + topical centrality. Note: separate `#se-platform` (CF14T2NU8) exists for SE-team operations; #help-sell-platform is the canonical SE practitioner help surface."
+  - id: C0SEPLAT02
+    name: engineering-best-practices
+    theme: theme-3
+    purpose: community
+    member_count: 2100
+    member_count_checked_at: "2026-05-19T00:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Cross-team engineering best-practices community. High-signal for governor-limit / multitenancy hygiene patterns."
+  - id: C0SEPLAT03
+    name: platform-architecture
+    theme: theme-3
+    purpose: techsupport
+    member_count: 1200
+    member_count_checked_at: "2026-05-19T00:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Platform-architecture deep dives."
+
+  # --- Theme 4: Cross-cloud Apex / Flow / LWC architecture ---
+  - id: C0XCLD01
+    name: apex-architecture
+    theme: theme-4
+    purpose: techsupport
+    member_count: 2700
+    member_count_checked_at: "2026-05-19T00:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Apex architecture patterns spanning multiple clouds. High-signal for governor-limit deep dives + sharing-rule cross-cloud impact."
+  - id: C0XCLD02
+    name: lwc-architecture
+    theme: theme-4
+    purpose: techsupport
+    member_count: 1900
+    member_count_checked_at: "2026-05-19T00:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "LWC architecture patterns; CSP / Locker / LWS deep-dives."
+  - id: C0XCLD03
+    name: flow-architecture
+    theme: theme-4
+    purpose: community
+    member_count: 1100
+    member_count_checked_at: "2026-05-19T00:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Flow architecture; auto-launched + record-triggered cross-cloud flow patterns."

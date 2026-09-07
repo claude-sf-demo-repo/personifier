@@ -1,0 +1,91 @@
+# Data 360 Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+# Naming-drift note (design-spec §3.4): many channels still named with "data-cloud"
+# even after the Data Cloud → Data 360 rebrand. Both terms surface during curation.
+# Channel IDs are placeholders pending Slack MCP authentication / channel-search;
+# refresh runs (T1 daily / T2 weekly) replace placeholders with real C-IDs and
+# bump member_count_checked_at on each pass.
+
+channels:
+  - id: C01G43E1347
+    name: help-technical-data-360
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-25T03:40:00Z"
+    last_material_change_at: "2026-05-20T10:48:53Z"
+    last_material_change_summary: "Amazon S3 Activation enhancement now GA (cross-link to #pop-data-360-community announcement). Ongoing IR / D360 Profile license edge-case discussion."
+    notes: "Primary Data 360 technical-help channel. Resolved 2026-05-25 from seed-ledger placeholder name `data-cloud-help`. Tier-A by help-purpose + topical centrality."
+  - id: C035RHTQ2QN
+    name: broadcast-data360-doc
+    purpose: announcements
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-25T03:40:00Z"
+    last_material_change_at: "2026-05-22T14:30:00Z"
+    last_material_change_summary: "New Trailhead module 'Data 360 Clean Rooms: Quick Look' published 2026-05-23; Code Extension Trailhead content broadcast 2026-05-21."
+    notes: "Data 360 doc-announcements broadcast (CX-led). Resolved 2026-05-25 from seed-ledger placeholder name `data-cloud-announcements`. Tier-A by purpose=announcements + canonical doc surface."
+  - id: C042CRUH84S
+    name: help-sell-data-360
+    purpose: sell
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-25T03:40:00Z"
+    last_material_change_at: "2026-05-22T17:22:31Z"
+    last_material_change_summary: "Connections '26 'Win Your POC and Grow Consumption' enablement (33 min recording + slides + NotebookLM grounding). Clean Room HLS bullseye flagged. Azure Data Lake Zero Copy Connector ETA inquiry unresolved."
+    notes: "Primary Data 360 sell-side help channel (canonical Data 360 naming post-rebrand). Resolved 2026-05-25 from seed-ledger placeholder name `data-cloud-se`. Tier-A by purpose=sell + topical centrality."
+  - id: C01M1FL05B5
+    name: pop-data-360-community
+    purpose: community
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-25T03:40:00Z"
+    last_material_change_at: "2026-05-20T01:19:46Z"
+    last_material_change_summary: "Data 360 TRE May 2026 release recording dropped (30+ feature highlights spanning Platform / Connect-Ingest / Transform-Prep / Segment-Activate). LOAD-BEARING for next T2 — see refresh/log/2026-05-25.md item 1."
+    notes: "Data 360 POP community channel (formerly Data Cloud POP). Resolved 2026-05-25 from seed-ledger placeholder name `data-cloud-platform` (closer fit by community + product-roadmap purpose). Tier-A — release-train signals + product team presence."
+  - id: C-PENDING-IDENTITY-RESOLUTION
+    name: identity-resolution
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-17T13:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "IR-specific deep-dive channel. Tier-A by topical relevance — IR is the most failure-prone Data 360 surface (per design-spec §5.5 IR-edge-case rationale defending Tier-3 gus_query). PENDING-T2 — 2026-05-25 first ID-resolution pass returned no clean canonical match; T2 retry with broader queries (`cdp identity` / `match merge` / `identity-resolution-tech`)."
+  - id: C028B64V8GK
+    name: cdp-segmentation-support
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-25T03:40:00Z"
+    last_material_change_at: "2026-05-22T19:20:32Z"
+    last_material_change_summary: "Active known-issue 2026-05-23: org 00D5f000006OmO6 segment showing 1 record vs. 1.2M-record source on USA416 v260.14; Engineering Agent escalation in flight."
+    notes: "CDP Segmentation AMA / techsupport. Resolved 2026-05-25 from seed-ledger placeholder name `segmentation`. Tier-B by cross-fleet collision rule (marketing-cloud-expert future Tier-A on activation-themed channels)."
+  - id: C-PENDING-DATA-CLOUD-ZERO-COPY
+    name: data-cloud-zero-copy
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-17T13:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Zero-copy + open lakehouse channel. Tier-B by topical-niche; Iceberg/Delta interop signal. PENDING-T2 — 2026-05-25 first ID-resolution pass returned only an unrelated Disney project channel; T2 retry with broader queries (`zero-copy` / `iceberg` / `lakehouse`)."
+  - id: C-PENDING-DATA-CLOUD-ES-QA
+    name: data-cloud-es-q-a
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-17T13:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Engineer-to-engineer techsupport for Data 360. Tier-B cross-traffic with engineering-led debugging questions. PENDING-T2 — 2026-05-25 first ID-resolution pass returned unrelated proj-* channels; T2 retry with broader queries (`data-cloud-engineering` / `data-cloud-q-a` / `cdp-engineering`)."

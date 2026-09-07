@@ -1,0 +1,107 @@
+# Marketing Cloud Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+#
+# Status: 6 of 8 channel placeholders resolved on 2026-05-25 first T1 daily refresh
+# via slack_search_channels. 2 entries (`marketing-cloud-se`, `mc-engagement-dev`)
+# kept as PENDING because the first ID-resolution pass returned no clean canonical
+# match. T2 weekly will retry with broader queries; T3 monthly will paginate
+# slack_list_channel_members for confirmed entries.
+
+channels:
+  - id: C01QSDTAUH4
+    name: help-sell-marketing-cloud
+    sub_product: engagement
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T03:55:00Z"
+    last_material_change_at: "2026-05-22T20:44:44Z"
+    last_material_change_summary: "Connections '26 Launchpad week — 5 daily previews 2026-05-19 → 2026-05-23 spanning Agentic & Autonomous / Reimagined Content Supply Chain / Personalization at Scale / Omnichannel & Conversational / Marketing Planning & Agent Ops / Unified Data & Intelligence. Heavy GA-cadence + roadmap signal. See refresh/log/2026-05-25.md item 1."
+    notes: "Primary Marketing Cloud sell-side help channel (resource hub + competitive intel). Resolved 2026-05-25 from seed-ledger placeholder name `marketing-cloud-help` (closer fit by purpose=help-sell + member-count signal). Tier-A by purpose + topical centrality."
+
+  - id: C01PFR8LV8Q
+    name: marketing-cloud-all
+    sub_product: cross
+    purpose: announcements
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T03:55:00Z"
+    last_material_change_at: "2026-05-22T15:46:34Z"
+    last_material_change_summary: "Salesforce Slackbot MCP integration GA in June 2026 (Kyle Robbins). Community Journey Validator MCP skill prototype (Facundo Mauro Suarez) — AMPscript validation + Test DE creation + automated fixes via MCE MCP server."
+    notes: "Marketing Cloud all-hands broadcast (cross-sub-product: Engagement, Account, Personalization, Growth). Resolved 2026-05-25 from seed-ledger placeholder name `marketing-cloud-announcements`. Tier-A by purpose=announcements + cross-sub-product reach."
+
+  - id: C06HPDKP6Q7
+    name: help-csg-marketingcloud-next
+    sub_product: cross
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T03:55:00Z"
+    last_material_change_at: "2026-05-18T07:47:03Z"
+    last_material_change_summary: "Agentforce Customer Segmentation OOTB Topics (Customer Segment Insights / Customer Segmentation Analysis / Predictive Segmentation Models) returning technical-error session IDs on Data 360 historical-data orgs. Unified Mobile/Messaging/Engagement SDK naming clarification thread. AMPscript / Marketing Object capability inquiries."
+    notes: "Marketing Cloud Next (Growth + AI) CSG help channel. Resolved 2026-05-25 from seed-ledger placeholder name `pardot-help` (closer fit by topical density on Marketing Cloud Next + Account Engagement). Tier-A by purpose=help + active-issue density."
+
+  - id: C01SEJGSMDH
+    name: help-support-mc-personalization
+    sub_product: personalization
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-26T03:55:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Marketing Cloud Personalization (formerly Interaction Studio) help channel. Resolved 2026-05-25 from seed-ledger placeholder name `mc-personalization`. Tier-B; promoted to Tier-A if member count crosses 1000 at T3 audit."
+
+  - id: C06HPPANTRQ
+    name: help-sell-marketingcloud-growth-advanced-editions
+    sub_product: growth
+    purpose: sell
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-26T03:55:00Z"
+    last_material_change_at: "2026-05-19T20:07:49Z"
+    last_material_change_summary: "264/266 release-cadence dates queried; majority of features GA in June 2026 (Dawn Ratcliff). Prospects-object update targeting October release (P.J. Nix). Strategic-customer escalation re. MC Advanced provisioning bug (Ivan Lapov, 4 case-numbers cited)."
+    notes: "Marketing Cloud Growth + Advanced sell-side channel. Resolved 2026-05-25 from seed-ledger placeholder name `mc-growth`. Tier-B; promoted to Tier-A if member count crosses 1000 or release-cadence signal warrants."
+
+  - id: C01TPFPD4DU
+    name: mc-einstein-for-marketing
+    sub_product: cross
+    purpose: help
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-26T03:55:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Einstein → Agentforce-integrated AI for Marketing Cloud (Subject Line Helper, Send Time Optimisation, Engagement Frequency, Copy Insights, Content Selection). Resolved 2026-05-25 from seed-ledger placeholder name `einstein-marketing`. FD9 weekly Vibes refresh starts here. Tier-B — promoted at T3 if FD9 traffic warrants."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: marketing-cloud-se
+    sub_product: cross
+    purpose: sell
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Marketing Cloud SE coordination channel (sell purpose). PENDING-T2 — 2026-05-25 first ID-resolution pass returned no clean canonical SE channel; T2 retry with broader queries (`marketing-cloud-se` / `mc-se` / `salesforce-marketing-se`). Cited when scoping an active opportunity to surface deal context."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: mc-engagement-dev
+    sub_product: engagement
+    purpose: techsupport
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-19T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Marketing Cloud Engagement developer channel (AMPscript / SSJS / API discussion). PENDING-T2 — 2026-05-25 first ID-resolution pass returned no clean canonical dev channel; T2 retry with broader queries (`marketing-cloud-engagement-dev` / `ampscript-dev` / `mc-dev`). Cited when D5b code-snippet questions surface."

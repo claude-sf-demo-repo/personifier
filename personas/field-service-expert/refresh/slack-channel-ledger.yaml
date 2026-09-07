@@ -1,0 +1,93 @@
+# Field Service Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+
+channels:
+  - id: C03BRC2SHQT
+    name: sfs-mobile-announcements
+    purpose: announcements
+    member_count: pending
+    member_count_checked_at: "2026-05-25T05:50:00Z"
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-19T23:21:15Z"
+    last_material_change_summary: "Google I/O 2026 — Android App Functions announcement (replacement for App Actions). 'Hey Google / Hey Gemini, get me my next job in Field Service' PoC unlock for Android customers (e.g., AAA). EAP open: forms.gle/GN5ybjQFhzHRCguM7. Karthick Raghavan to wire App Functions to existing PoC."
+    notes: "Field Service Mobile team announcements (tech + product + CX + Eng + PM + Program Management + UX). Resolved 2026-05-25 from seed-ledger placeholder name `field-service-mobile`. Tier-A by §1.4 unique-signal override + load-bearing mobile-app volatility hot-spot per design-spec §3.4. T1 daily refresh tracks this channel FIRST."
+
+  - id: C020J8WMGER
+    name: help-sell-salesforce-field-service
+    purpose: help
+    member_count: pending
+    member_count_checked_at: "2026-05-25T05:50:00Z"
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-19T19:40:24Z"
+    last_material_change_summary: "**LOAD-BEARING REBRAND**: Salesforce Field Service → A1 Field Service Edition (A1FSE) + Agentforce for Field Service (add-on). Q2 promos: 50% off A1FSE Upgrade from FSL+; Buy Field Service UE Get Agentforce for Field Service Free. FSL+→A1FSE 70%+ premium; Service EE→A1FSE 140%+ premium. **No-mixing-licenses-in-same-org rule.** RUL CRED-access language complexity under contractual review."
+    notes: "Primary Salesforce Field Service sell-side help channel. Resolved 2026-05-25 from seed-ledger placeholder name `field-service-help`. Tier-A by purpose=help-sell + member-count threshold + topical centrality. ClickSoftware rebrand-chain overlay active."
+
+  - id: C-FIELD-SERVICE-ANNOUNCEMENTS
+    name: field-service-announcements
+    purpose: announcements
+    member_count: pending
+    member_count_checked_at: "2026-05-23T12:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-23T12:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Broadcast channel for Field Service release announcements."
+
+  - id: C02529B5928
+    name: sfs-scheduling-intelligence
+    purpose: techsupport
+    member_count: pending
+    member_count_checked_at: "2026-05-25T05:50:00Z"
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-22T11:51:08Z"
+    last_material_change_summary: "Active scheduling-engine optimization-service unexpected-behavior thread (Chhayank Sharma 5/22 → Noam Gilboa 5/24). Schedule / Candidates / Global Optimization service comparison + Schedule Policy / Service Objectives / Relevance Groups configuration triage."
+    notes: "Field Service Scheduling Intelligence public forum (managed package + off-core services). Resolved 2026-05-25 from seed-ledger placeholder name `field-service-scheduling`. Tier-A by topical relevance for scheduling-engine churn (OAA / DRIP / batch)."
+
+  - id: C-FIELD-SERVICE
+    name: field-service
+    purpose: community
+    member_count: pending
+    member_count_checked_at: "2026-05-23T12:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-23T12:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Top-level Field Service community channel."
+
+  - id: C-FIELD-SERVICE-SE
+    name: field-service-se
+    purpose: sell
+    member_count: pending
+    member_count_checked_at: "2026-05-23T12:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-23T12:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "SE coordination channel; Tier-B by sell purpose."
+
+  - id: C-FSL-ENGINEERING
+    name: fsl-engineering
+    purpose: techsupport
+    member_count: pending
+    member_count_checked_at: "2026-05-23T12:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-23T12:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Engineering Q&A; legacy-named (FSL → Field Service rebrand chain). Tier-B by lower volume."
+
+  - id: C-FIELD-SERVICE-UTILITIES
+    name: field-service-utilities
+    purpose: community
+    member_count: pending
+    member_count_checked_at: "2026-05-23T12:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-23T12:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Field Service + E&U cross-traffic. Tier-B; E&U expert may claim Tier-A. Storm-day surge patterns surface here."

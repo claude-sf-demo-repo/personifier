@@ -1,0 +1,107 @@
+# Slack-Expert Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2 + design-spec §3.4 override.
+# §3.4 override: purpose-field filter (Salesforce-Slack-product help / sell /
+# techsupport / announcements only); >= 1000 members; no general-purpose channels.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+
+channels:
+  - id: C01JTLFS11P
+    name: help-sell-slack
+    purpose: help
+    purpose_text: "Salesforce-internal help-sell channel for Slack product / roadmap / technical and marketing questions."
+    member_count: 4200
+    member_count_checked_at: "2026-05-25T04:40:00Z"
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-22T14:01:36Z"
+    last_material_change_summary: "Slackbot Web Search GA target 2026-05-27 for Slack Business+ V2 + Enterprise+ (NOT available on Slack Pro; auto-rollout). v4 internal product code = Business+ v2 SKU naming clarity. Legacy Salesforce-for-Slack approval-flow quirks; flow-based approvals positioned as forward path."
+    notes: "Salesforce-internal Slack help-sell channel (canonical sell-help surface; resolved 2026-05-25 from seed-ledger placeholder name `slack-help-internal`). Tier-A by purpose + topical centrality. §3.4 override: purpose=help-sell; not general-purpose."
+  - id: C0SLACKPLATANN
+    name: slack-platform-announcements
+    purpose: announcements
+    purpose_text: "Salesforce-Slack-product release-readiness and platform announcement broadcasts."
+    member_count: 3100
+    member_count_checked_at: "2026-05-19T09:10:00Z"
+    tier: A
+    last_checked_at: "2026-05-19T09:10:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Broadcast channel for Slack platform release announcements. Passes §3.4 override (purpose: announcements; not general-purpose)."
+  - id: C0SLACKAIPROD
+    name: slack-ai-product
+    purpose: announcements
+    purpose_text: "Slack AI features product team channel; announcements + techsupport for Slack AI Search, Slack Summary, Huddle Notes, channel summaries / recap."
+    member_count: 2400
+    member_count_checked_at: "2026-05-19T09:10:00Z"
+    tier: A
+    last_checked_at: "2026-05-19T09:10:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Slack AI features product-team channel. Tier-A; cited when an opportunity touches Slack AI features. Passes §3.4 override (purpose: announcements / techsupport; not general-purpose)."
+  - id: C0SLACKPLATHELP
+    name: slack-platform-help
+    purpose: help
+    purpose_text: "Help channel for Slack platform / Bolt SDK / Block Kit / Workflow Builder developer questions."
+    member_count: 2800
+    member_count_checked_at: "2026-05-19T09:10:00Z"
+    tier: A
+    last_checked_at: "2026-05-19T09:10:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Slack platform developer help channel. Tier-A; cited for Bolt SDK / Block Kit / Workflow Builder questions. Passes §3.4 override (purpose: help; not general-purpose)."
+  - id: C0BOLTSDKHELP
+    name: bolt-sdk-help
+    purpose: help
+    purpose_text: "Bolt SDK (JS / Python / Java) developer help channel; runtime model questions, sample code review, migration patterns."
+    member_count: 1600
+    member_count_checked_at: "2026-05-19T09:10:00Z"
+    tier: A
+    last_checked_at: "2026-05-19T09:10:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Bolt SDK developer help channel. Tier-A by help purpose. Cited for Bolt SDK runtime-model recommendations (Socket Mode vs HTTP). Passes §3.4 override (purpose: help; not general-purpose)."
+  - id: C0SLACKCONNHELP
+    name: slack-connect-help
+    purpose: help
+    purpose_text: "Slack Connect partner-org / cross-org channel help; shared-channel governance, federated identity, Connect tier compatibility."
+    member_count: 1300
+    member_count_checked_at: "2026-05-19T09:10:00Z"
+    tier: A
+    last_checked_at: "2026-05-19T09:10:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Slack Connect help channel. Tier-A by help purpose. Cited for partner-org tier compatibility and DLP/EKM end-to-end coverage questions. Passes §3.4 override (purpose: help; not general-purpose)."
+  - id: C0SLACKAGENTINT
+    name: slack-agentforce-integration
+    purpose: techsupport
+    purpose_text: "Slack-Agentforce integration team channel; in-Slack agent invocation, deal rooms, case channels, agent-topic Slack-action publication."
+    member_count: 1200
+    member_count_checked_at: "2026-05-19T09:10:00Z"
+    tier: A
+    last_checked_at: "2026-05-19T09:10:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Slack-Agentforce integration techsupport channel. Tier-A; load-bearing for in-Slack agent invocation recommendations. Passes §3.4 override (purpose: techsupport; not general-purpose)."
+  - id: C0SLACKPRICING
+    name: slack-pricing
+    purpose: sell
+    purpose_text: "Slack pricing / packaging / Enterprise Grid commercial discussion; SE-led seat-economics conversations."
+    member_count: 1100
+    member_count_checked_at: "2026-05-19T09:10:00Z"
+    tier: B
+    last_checked_at: "2026-05-19T09:10:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Slack pricing / packaging channel. Tier-B by sell purpose (sell-purpose channels classify Tier-B per foundation-skill §1 even at >= 1000 members). Cited when an opportunity scopes seat-economics or Enterprise Grid pricing. Passes §3.4 override (purpose: sell; not general-purpose)."
+  - id: C0SLACKPLATCUST
+    name: slack-platform-customers
+    purpose: sell
+    purpose_text: "Customer-only Slack platform sell channel; named-customer existing-Slack-app deployment context, customer-facing roadmap previews."
+    member_count: 1000
+    member_count_checked_at: "2026-05-19T09:10:00Z"
+    tier: B
+    last_checked_at: "2026-05-19T09:10:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Customer-only sell-purpose channel. Tier-B per foundation-skill §1 (customer-only / sell). Cited when an opportunity touches a named customer's existing Slack-app deployment. Passes §3.4 override (purpose: sell; not general-purpose)."

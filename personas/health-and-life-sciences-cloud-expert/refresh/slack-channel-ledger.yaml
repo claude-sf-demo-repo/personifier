@@ -1,0 +1,165 @@
+# Health and Life Sciences Cloud Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+# Sub-vertical tag is H&LS-specific: payer / provider / pharma / medtech / cross.
+#
+# Status (2026-05-22): Channel IDs and member counts are placeholders pending a
+# successful refresh-time Slack-search wrapper run. The first T1 daily refresh
+# populates real values via foundation-skill cloud_expert_slack_search. Channel
+# names are verified against the known H&LS Slack ecosystem; IDs and counts will
+# be filled at first refresh. Cautious-first posture argues against any runtime
+# live read of these channels — runtime allowlist is Tier U only; Tier-3 NONE at v1.0.0.
+#
+# PHI-tainted-signal escalation rule: foundation-skill wrapper flags + skips any
+# message matching PHI heuristics. The persona NEVER ingests or persists PHI.
+
+channels:
+  # === Cross-sub-vertical ===
+  - id: C01MAALDGEB
+    name: help-sell-health-cloud
+    purpose: help
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-19T22:55:48Z"
+    last_material_change_summary: "**LOAD-BEARING REBRAND**: Health Cloud → Agentforce for Health (Sumit Sharan 5/20: Document AI for Health behind Agentforce for Health PUPM SKU; no Flex Credits required vs. D360 / Mulesoft Flow). Pyx Health entitlement-issue thread (Health Cloud EE → Agentforce for Health upgrade clarification needed)."
+    notes: "Primary Health Cloud sell-side help channel. Resolved 2026-05-25 from seed-ledger placeholder name `health-cloud`. Tier-A by purpose=help-sell + cross-sub-vertical relevance. Cautious-first posture: locked Clinical-decision disclaimer renders for any insights file body section that cites this channel."
+
+  - id: C071F71QZ0X
+    name: help-sell-life-sciences-cloud
+    purpose: help
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-20T13:08:32Z"
+    last_material_change_summary: "266 Safe Harbor productized direction for unspecified LSC integration feature; interim options Riva (partner) + EAC + Flow (customer-extension workaround). RecordAlert NOT supported for Experience Cloud user."
+    notes: "Primary Life Sciences Cloud sell-side help (pharma + MedTech surface). Resolved 2026-05-25 from seed-ledger placeholder name `life-sciences-cloud`. Tier-A. Sub-vertical: cross. Cautious-first posture active."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: hcls-cloud-help
+    purpose: help
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-22T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Cross-sub-vertical H&LS help channel. Tier-A by purpose=help and topical relevance."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: hcls-announcements
+    purpose: announcements
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-22T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Broadcast channel for H&LS release announcements. The T1 daily refresh skim starts here. Sub-vertical: cross."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: hcls-se
+    purpose: sell
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-22T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "SE coordination channel. Tier-A by topical relevance even though purpose=sell (foundation skill §1.4 override; H&LS SE channel uniquely high-signal for opportunity scoping). Sub-vertical: cross."
+
+  - id: C020DANSS94
+    name: tmp-help-health-cloud
+    purpose: techsupport
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-22T00:52:49Z"
+    last_material_change_summary: "Health Cloud managed-package gack reproducing in customer org. ServiceAppointmentShare RowCause query for affected user with HC licenses. PBGeo service known-issue likely to be filed (similar to GUS a07EE00002aVI6cYAG). Zero PHI signals."
+    notes: "Health Cloud product-help techsupport (HC technical questions to CCE / engineering). Resolved 2026-05-25 from seed-ledger placeholder name `hcls-engineering`. Tier-B until member-count confirmed. Sub-vertical: cross. PHI-tainted-signal escalation active."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: hcls-fhir
+    purpose: techsupport
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-22T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "FHIR R4 + US Core integration patterns channel. Cross-sub-vertical but provider-leaning. Cited when EMR integration / FHIR Bulk Data / US Core conformance discussed."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: hcls-hipaa-shield
+    purpose: techsupport
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-22T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Salesforce-Shield / BAA / HIPAA-pattern discussion channel. Tier-B by topical specificity. Clinical-decision disclaimer renders when this channel is cited because chatter often references compliance surfaces."
+
+  # === Payer sub-vertical ===
+  - id: PLACEHOLDER-PENDING-T1
+    name: health-cloud-payer
+    purpose: community
+    sub_vertical: payer
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-22T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Payer sub-vertical Tier-A by sub-vertical override (design-spec §12 R5). Member-360, claims, prior auth, utilisation review, network management, payer-provider data exchange."
+
+  # === Provider sub-vertical ===
+  - id: PLACEHOLDER-PENDING-T1
+    name: health-cloud-provider
+    purpose: community
+    sub_vertical: provider
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-22T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Provider sub-vertical Tier-A by sub-vertical override. Patient-360, care plans, care management, provider scheduling, EMR integration. Clinical-decision disclaimer renders in any insights file body section that cites this channel when chatter touches patient-care decisions."
+
+  # === Pharma sub-vertical ===
+  - id: C0830AQ8SCA
+    name: global-life-sciences
+    purpose: announcements
+    sub_vertical: pharma
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-21T11:39:03Z"
+    last_material_change_summary: "**Pierre Fabre selects Agentforce Life Sciences** (press release 2026-05-21; World Tour Paris Keynote demo). 262 release features in enablement now. LSC Platform Automation + Lightning Component capability matrix published 2026-05-19."
+    notes: "Global Life Sciences FY27 hub (sales plays + product updates + enablement + partner strategy). Resolved 2026-05-25 from seed-ledger placeholder name `life-sciences-pharma` (closer fit — channel covers pharma + cross-LSC; sub-vertical-pharma override applied). Tier-A. Cautious-first posture active. Veeva-adjacency boundary preserved."
+
+  # === MedTech sub-vertical ===
+  - id: PLACEHOLDER-PENDING-T1
+    name: life-sciences-medtech
+    purpose: community
+    sub_vertical: medtech
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-22T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "MedTech sub-vertical Tier-A by sub-vertical override. Device registration, complaint handling, field service for medical devices, post-market surveillance commercial surface."

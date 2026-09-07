@@ -1,0 +1,113 @@
+# Apromore Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+# Partner-cloud allowance: ≥ 4 entries (not the canonical ≥ 8 floor).
+#
+# Status (2026-05-25): First-pass channel-ID resolution discovered 5 new
+# post-acquisition Apromore-named channels superseding pre-acquisition seed-ledger
+# placeholders. T2 should restructure ledger; pre-acquisition placeholders
+# (`partner-integrations`, `sales-cloud-process`, `service-cloud-process`) flagged
+# for retirement.
+
+channels:
+  # === Post-acquisition Apromore channels (resolved 2026-05-25) ===
+  - id: C09LK6XLXAL
+    name: apromore-gtm-faq
+    purpose: help
+    member_count: 0
+    member_count_checked_at: "2026-05-25T06:10:00Z"
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-22T16:39:46Z"
+    last_material_change_summary: "Apromore Customer Zero environment active for pilot (coordinated by Amy Adamovich). Apromore Japan partner = Heartcore (Hitachi Solutions is a customer, not a partner). Interim selling workflow for Apromore (Goonjan Parkhe)."
+    notes: "Primary post-acquisition Apromore GTM/FAQ channel (created 2025-10-10 by Kat Sun). Resolved 2026-05-25; promoted to Tier-A by purpose=help-sell + topical centrality. Brand: 'Apromore' or 'Apromore from Salesforce' canonical."
+
+  - id: C0AU79XQMSQ
+    name: apromore-provisioning
+    purpose: techsupport
+    member_count: 0
+    member_count_checked_at: "2026-05-25T06:10:00Z"
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-19T19:25:54Z"
+    last_material_change_summary: "**LOAD-BEARING P&P** (Marlon Dumas in P&P meeting): 5 PermissionSetLicenses defined post-acquisition (Free / Analyst / Viewer = legacy ViewerPlus / ModelViewer / ModelDesigner; legacy 'viewer' role DROPPED). 5M-events/rows-per-log pricing pack model (multiples of 5M). Pipeline log-overflow: delete oldest rows (Gus card pending). T2 ingest critical."
+    notes: "Apromore provisioning + P&P discussion channel (created 2026-04-21 by Matt Goldspink). Resolved 2026-05-25; promoted to Tier-A by load-bearing P&P signal density. Brand: 'Apromore' canonical."
+
+  - id: C0AV3ADJBDE
+    name: apromore-fit-test-results
+    purpose: techsupport
+    member_count: 0
+    member_count_checked_at: "2026-05-25T06:10:00Z"
+    tier: B
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Apromore-Falcon Integration fit-test-results channel (created 2026-04-21 by Gowri Kumar Annapantula). Bot-only traffic this interval. Resolved 2026-05-25; Tier-B by techsupport purpose. Falcon-integration is canonical Apromore-Salesforce integration vector."
+
+  - id: C09PD9LRJNM
+    name: apromore-tandp-onboarding
+    purpose: community
+    member_count: 0
+    member_count_checked_at: "2026-05-25T06:10:00Z"
+    tier: B
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Apromore T&P (Technology & Products) onboarding channel (created 2025-10-28 by Idit Vachtel). Resolved 2026-05-25; Tier-B by community purpose."
+
+  - id: C0ARU550ER1
+    name: proj-apromore-replatforming
+    purpose: techsupport
+    member_count: 0
+    member_count_checked_at: "2026-05-25T06:10:00Z"
+    tier: B
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Apromore replatforming project channel (created 2026-04-10 by Traisa Brockmann). No public traffic this interval (likely private-thread heavy). Resolved 2026-05-25; Tier-B for migration tracking."
+
+  # === Pre-acquisition seed-ledger entries — flagged for T2 retirement ===
+  - id: C03HYH3GJCB
+    name: apromore-process-mining
+    purpose: community
+    member_count: 0
+    member_count_checked_at: "2026-05-25T06:10:00Z"
+    tier: B
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Pre-acquisition Apromore-process-mining community channel (created 2022-06-02 by Sudha Krishnamurthy). Resolved 2026-05-25 from seed-ledger placeholder name `process-mining`. Tier-B by community purpose. T2 to evaluate whether to keep alongside post-acquisition channels or retire."
+
+  - id: PLACEHOLDER-PARTNER-INTEGRATIONS
+    name: partner-integrations
+    purpose: community
+    member_count: 0
+    member_count_checked_at: "2026-05-25T06:10:00Z"
+    tier: B
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Partner-cloud cross-cutting channel; pre-acquisition seed entry. PENDING-T2 — 2026-05-25 first ID-resolution pass returned no clean canonical match; channel namespace populated by post-acquisition #apromore-* surfaces. T2 should retire this entry."
+
+  - id: PLACEHOLDER-SALES-CLOUD-PROCESS
+    name: sales-cloud-process
+    purpose: techsupport
+    member_count: 0
+    member_count_checked_at: "2026-05-25T06:10:00Z"
+    tier: B
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Salesforce-side process-engineering channel; pre-acquisition seed entry. PENDING-T2 — 2026-05-25 first ID-resolution pass returned no clean canonical match. T2 should retire this entry."
+
+  - id: PLACEHOLDER-SERVICE-CLOUD-PROCESS
+    name: service-cloud-process
+    purpose: techsupport
+    member_count: 0
+    member_count_checked_at: "2026-05-25T06:10:00Z"
+    tier: B
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Salesforce-side case-process-engineering channel; pre-acquisition seed entry. PENDING-T2 — 2026-05-25 first ID-resolution pass returned no clean canonical match. T2 should retire this entry."

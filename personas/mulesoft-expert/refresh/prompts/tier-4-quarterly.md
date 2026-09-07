@@ -1,0 +1,128 @@
+---
+tier: 4
+cadence: quarterly
+local_time: "First Wed of Jan/Apr/Jul/Oct, 10:23 (date-guarded)"
+tool_tier: R
+description: "Quarterly source-list re-rank; volatility re-evaluation; channel-ledger tier re-evaluation; proposed-combos sweep per FD8; Tier-3 allowlist + W6 status re-evaluation."
+---
+
+# Tier 4 — Quarterly Source Re-rank (mulesoft-expert)
+
+Run `/refresh-persona mulesoft-expert --tier=t4`. Date-guarded: only
+runs on the first Wednesday of January, April, July, or October.
+
+## Date guard
+
+```bash
+month=$(date +%-m)
+day=$(date +%-d)
+if [ "$day" -gt 7 ] || ([ "$month" != "1" ] && [ "$month" != "4" ] && [ "$month" != "7" ] && [ "$month" != "10" ]); then
+  echo "T4 quarterly: today is not the first Wednesday of Jan/Apr/Jul/Oct — skipping."
+  exit 0
+fi
+```
+
+## Procedure
+
+1. **Load foundation skill** — `cloud-expert-foundations` v1.0.0.
+2. **Source-tier re-rank**:
+   - For each tier in `seed-sources.md`, re-evaluate URL relevance against
+     the past quarter's T1 / T2 / T3 logs.
+   - Promote a T3 source to T2 if it produced ≥ 3 high-signal items in the
+     quarter; demote a T2 source to T3 if it produced 0.
+   - Add new sources surfaced via Round-2-equivalent research (the T3
+     monthly canon audits feed candidates).
+   - Drop sources that drifted (4xx-perm or off-topic).
+3. **Volatility re-evaluation**:
+   - Read the cloud-fleet `volatility-table.md` row for mulesoft-expert.
+     Current rating: 8 (sticky).
+   - If the past quarter's release cadence (Anypoint AI surface changes,
+     Code Builder release rate), MVP-blog volume, or known-issue rate
+     suggests a different rating, surface to user with proposal:
+     "Volatility rating proposed change: 8 → <N>. Reason: <one line>.
+     Confirm to update fleet table."
+   - Do NOT edit the fleet table directly; the fleet's quarterly review
+     (router T4) reconciles all 19 personas' proposals.
+4. **Channel-ledger tier re-evaluation**:
+   - For each tracked channel, look at the past quarter's `last_checked_at`
+     timestamps and `last_material_change_summary` density.
+   - A Tier-A channel that produced no material changes in 90 days is a
+     candidate for downgrade. A Tier-B channel that produced ≥ 5 material
+     changes is a candidate for upgrade.
+   - Apply downgrades and upgrades; record in run log.
+5. **Re-evaluate Tier-3 runtime allowlist**:
+   - Per design-spec §5.5: `mcp__plugin_codesearch_codesearch__search` and
+     `gus_query` are Tier-3 runtime opt-ins. Re-evaluate continued defended
+     need each quarter.
+   - Audit the past quarter's runtime invocations of each Tier-3 tool
+     (manual run-log Tier-3 writeback entries per
+     `protocols/channel-ledger-discipline.md`).
+   - If `codesearch_search` was invoked < 3 times across the quarter and
+     no recommendation depended on its output, surface to user with
+     proposal: "Drop `codesearch_search` from Tier-3 runtime allowlist
+     (no defended need over the quarter)."
+   - Same evaluation for `gus_query`.
+   - Record decisions in run log; if the user confirms a drop, the next
+     dispatch updates `agent.md`'s `tools:` line accordingly.
+6. **Re-evaluate W6 status (B vs A — Vibes landscape check)**:
+   - Read `personifier/personas/agentforce-expert/ido-vibes-catalog.md`.
+   - Confirm zero Mulesoft-targeted Vibes skills present (W6=B holds) OR
+     ≥ 1 present (W6 flips to A; file `DRIFT-MULE-<N>` per the T2/T3
+     guard procedure).
+   - If W6 flips → trigger orchestrator action: add Vibes section to
+     T2 weekly prompt, add `## Vibes skills` section to `knowledge.md`,
+     update `protocols/insights-authoring-discipline.md` Vibes-catalog
+     overlay from explicit-empty to active-refresh.
+   - Record W6 status in run log: "W6 status: <B unchanged | A — DRIFT-MULE-<N> filed>".
+7. **Append proposed-combos for the quarter** (FD8):
+   - Walk the past quarter's T2 weekly logs and T3 monthly logs for
+     candidate-combo signals.
+   - For each candidate, write a block to
+     `refresh/log/<YYYY-MM-DD>-proposed-combos.md` per foundation skill §4
+     and `protocols/combo-cross-ref-discipline.md`. Use
+     `personifier/meta-agent/cloud-fleet/proposed-combos-template.md` as
+     the schema.
+   - If no candidates surfaced this quarter, write the no-proposals line
+     per foundation skill §4.3.
+8. **Append to log** — write `refresh/log/<YYYY-MM-DD>.md`:
+
+   ```markdown
+   # T4 quarterly refresh — mulesoft-expert — <YYYY-MM-DD>
+
+   ## Source-tier re-ranks
+   <promotions / demotions / drops / additions>
+
+   ## Volatility re-evaluation
+   <current 8; proposed change or "no change">
+
+   ## Channel-ledger tier re-evaluation
+   <downgrades / upgrades; cite ledger entries>
+
+   ## Tier-3 runtime allowlist re-evaluation
+   <codesearch_search continued / dropped; gus_query continued / dropped>
+
+   ## W6 status re-evaluation
+   <"W6=B unchanged" OR "W6 flipped to A — DRIFT-MULE-<N> filed">
+
+   ## Proposed combos for the quarter (FD8)
+   <count of proposals filed; or "none — no-proposals line written">
+   ```
+
+## Protocols active during this run
+
+- `protocols/citation-discipline.md`.
+- `protocols/channel-ledger-discipline.md`.
+- `protocols/combo-cross-ref-discipline.md` — load-bearing this tier;
+  combo proposal sweep is the load-bearing FD8 task.
+- `protocols/insights-authoring-discipline.md` — Vibes-catalog
+  explicit-empty overlay informs the W6 re-evaluation.
+
+## What this tier does NOT do
+
+- Edit the fleet `volatility-table.md`. The router's quarterly sweep
+  (Wave 5 deliverable) reconciles fleet-wide.
+- Edit `cloud-combo-matrix.md`. Same; cloud-experts only file proposed-combos
+  / combo proposal lines per FD8 / foundation skill §4.1 iron rule.
+- Auto-flip W6. The orchestrator owns the W6 flip implementation; T4
+  files the drift item and surfaces, but does NOT mutate prompts /
+  protocols / knowledge.md sections by itself.

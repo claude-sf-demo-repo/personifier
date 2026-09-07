@@ -1,0 +1,145 @@
+# Agentforce Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+#
+# Note: `slack_read_canvas` (Tier-3 runtime) is NOT mediated by the
+# foundation-skill wrappers. Canvas reads are recorded manually in
+# refresh/log/<date>.md per protocols/channel-ledger-discipline.md.
+#
+# Seeded 2026-05-17 from Slack channel searches (Phase 3 Task 3.5).
+# Member counts marked `pending-T3-audit` until first T3 monthly refresh
+# performs the population pass via slack_list_channel_members.
+
+channels:
+  - id: C07FQJ7B36H
+    name: agentforce-agent-triggers-general
+    purpose: techsupport
+    member_count: pending-T3-audit
+    member_count_checked_at: "2026-05-17T00:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:35:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Primary general-purpose Agentforce technical channel. Tier-A by topical relevance to Topic+Action architecture."
+
+  - id: C0AA78YCT9S
+    name: technical-support-new-agent-builder-and-script
+    purpose: techsupport
+    member_count: pending-T3-audit
+    member_count_checked_at: "2026-05-17T00:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:35:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Tech-support channel covering Agent Builder + Agent Script DSL. Tier-A by topical relevance to Flagship coverage tier."
+
+  - id: C0A10JM34MC
+    name: help-field-new-agentforce-builder-and-script
+    purpose: help
+    member_count: pending-T3-audit
+    member_count_checked_at: "2026-05-17T00:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:35:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Field-help channel for Agent Builder + Agent Script DSL questions. Tier-A by purpose (help) plus topical relevance."
+
+  - id: C095MTZHC8N
+    name: agentscript-discussion
+    purpose: community
+    member_count: pending-T3-audit
+    member_count_checked_at: "2026-05-17T00:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:35:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Open discussion of Agent Script DSL. Tier-A by Flagship-tier topical relevance (override per foundation skill §1.4 — Agent Script DSL is uniquely high-signal)."
+
+  - id: C0958CRG806
+    name: agentscript-dev
+    purpose: techsupport
+    member_count: pending-T3-audit
+    member_count_checked_at: "2026-05-17T00:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:35:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Agent Script DSL development. Tier-A by Flagship-tier topical relevance."
+
+  - id: C04MZRBPLRX
+    name: help-agentforce-vibes
+    purpose: help
+    member_count: pending-T3-audit
+    member_count_checked_at: "2026-05-17T00:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:35:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Agentforce Vibes-skill help channel. LOAD-BEARING for catalog-authority responsibility — T2 weekly refresh anchors here. Per design-spec §12 R3 exception: never auto-downgrade below Tier-A regardless of cross-fleet collisions."
+
+  - id: C09JUQURGG4
+    name: help-sell-agentforce-vibes
+    purpose: sell
+    member_count: pending-T3-audit
+    member_count_checked_at: "2026-05-17T00:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:35:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Sell-side Vibes-skill discussion. Tier-A — load-bearing for catalog-authority surface (sales surfacing of newly-released Vibes skills)."
+
+  - id: C0598BJTQ12
+    name: genai-prompt-builder-help
+    purpose: help
+    member_count: pending-T3-audit
+    member_count_checked_at: "2026-05-17T00:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:35:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Prompt Builder help channel. Tier-A by Flagship-tier coverage of Prompt Templates."
+
+  - id: C069NAQEHKL
+    name: genai-prompt-templates-announcements
+    purpose: announcements
+    member_count: pending-T3-audit
+    member_count_checked_at: "2026-05-17T00:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-25T03:35:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Prompt Templates announcements (release-cadence + breaking changes). Tier-A by purpose + topical relevance. T1 daily skim starts here for Prompt Template release signal."
+
+  - id: C07T68KNENP
+    name: industries-agentforce-support
+    purpose: techsupport
+    member_count: pending-T3-audit
+    member_count_checked_at: "2026-05-17T00:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-17T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Industries-cloud Agentforce support cross-traffic. Tier-B because topically lateral; relevant when an Agentforce opportunity touches industry clouds (HLS / FSC / Comms / Manufacturing)."
+
+  - id: C01V0JXHA8J
+    name: technical-einstein-bots
+    purpose: techsupport
+    member_count: pending-T3-audit
+    member_count_checked_at: "2026-05-17T00:00:00Z"
+    tier: C
+    last_checked_at: "2026-05-17T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Deprecated Einstein Bots tech-support. Tier-C — included only because Ambient-tier coverage of legacy migration paths is part of D3."
+
+  - id: C07M0C7F8LS
+    name: einstein-bots-public
+    purpose: community
+    member_count: pending-T3-audit
+    member_count_checked_at: "2026-05-17T00:00:00Z"
+    tier: C
+    last_checked_at: "2026-05-17T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Deprecated Einstein Bots public discussion. Tier-C — Ambient-tier tracking only; surfaces in knowledge.md Ambient section via T3 monthly audits."

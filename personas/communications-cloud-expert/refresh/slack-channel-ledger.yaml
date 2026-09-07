@@ -1,0 +1,144 @@
+# Communications Cloud Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+#
+# Phase 3 seed (v1.0.0): channel ids and member counts will be replaced by the
+# next refresh-time Slack-search wrapper run. The seed represents the canonical
+# Comms Cloud channel surface known at v1.0.0 across the two sub-verticals
+# (B2C subscriber lifecycle / B2B enterprise telco / cross / heritage). If a
+# candidate channel does not exist in the user's workspace, T1 daily refresh
+# records `<no channel found for query: ...>` rather than inventing a placeholder.
+
+channels:
+  - id: "C0CC0IND0"
+    name: salesforce-industries-comms
+    purpose: community
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: null
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Primary Salesforce Industries Comms Cloud community channel. Tier-A by member count + cross sub-vertical coverage. Canonical home for release-readiness chatter. v1.0.0 seed; ID/member_count replaced on first T1 wrapper run."
+
+  - id: "C01H0U55GD8"
+    name: omnistudio
+    purpose: techsupport
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-22T11:05:17Z"
+    last_material_change_summary: "DR Engine recurring gack from `vlocity/cme_sf-industries_cme-package_release-devint` env (Ritik Aggarwal 5/21 — sub-vertical: cross/heritage). OmniStudio.IntegrationProcedureService runtime resolution issue without managed package (Abhishek Singh Kumawat 5/22). ENGIE case 473516485 — historical OmniStudio call usage / TenantUsageEntitlement / Core Tenant Usage / Digital Wallet billing-ledger query."
+    notes: "Primary OmniStudio sub-stack channel covering OmniScript / Integration Procedures / Data Mappers / FlexCard authoring. Tier-A by member count + load-bearing OmniStudio Flagship cluster. Cross-references the existing sf-industry-commoncore-{omniscript,integration-procedure,datamapper,flexcard,omnistudio-analyze} skills. Resolved 2026-05-25 with real C-ID."
+
+  - id: "C01LZCZKRPG"
+    name: help-sell-communications-cloud
+    purpose: help
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-21T16:20:20Z"
+    last_material_change_summary: "**LOAD-BEARING REBRAND** (richest SKU taxonomy in fleet): Comms Cloud → Agentforce for Communications (add-on SKU = Sales+Service+Comms agentic layer); Agentforce Communications 1 Edition (full edition with CPQ); Comms Cloud Advanced (Core, govcloud-compliant). Plus iNet customer expansion deal scoping for June 17 specialist call (sub-vertical: B2B-telco)."
+    notes: "Primary Comms Cloud sell-side help channel. Resolved 2026-05-25 from seed-ledger placeholder name `comms-cloud-help`. Tier-A by purpose=help-sell + cross sub-vertical coverage. Cautious-first posture: locked CPNI / customer-privacy boundary block renders for any insights file body section that cites this channel."
+
+  - id: "C0CC0ANN0"
+    name: comms-cloud-announcements
+    purpose: announcements
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: null
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Comms Cloud release-readiness + announcements broadcast. T1 daily refresh skim starts here. v1.0.0 seed."
+
+  - id: "C0CC0B2B0"
+    name: comms-cloud-b2b
+    purpose: techsupport
+    sub_vertical: b2b-telco
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: null
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "B2B enterprise telco discussion; multi-site MNC quote-to-cash, MACD orchestration, contract amendments. Tier-B by member count; load-bearing for B2B-sub-vertical claims. v1.0.0 seed."
+
+  - id: "C0CC0EPC0"
+    name: comms-cloud-epc
+    purpose: techsupport
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: null
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "EnterpriseProductCatalog discussion; product specs, attributes, eligibility rules, pricing, attribute-framework-v1-vs-v2 chatter. Tier-B by member count + EPC Flagship surface. v1.0.0 seed."
+
+  - id: "C0CC0TMF0"
+    name: tmf-alignment
+    purpose: techsupport
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: null
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "TMF Forum API alignment discussion (TMF620 / 622 / 633 / 637 / 638 / 666 / 678). Tier-B; tracked at T3 monthly canon audit for TMF spec-version delta tracking (per design-spec §7 / R7). v1.0.0 seed."
+
+  - id: "C0CC0FSU0"
+    name: field-service-utilities
+    purpose: techsupport
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: null
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Overlap channel for telco truck-roll / installation use cases (Comms + Field Service combo). Tier-B per cross-claim mitigation; the future field-service-expert claims Tier-A from the FS side. v1.0.0 seed."
+
+  - id: "C0CC0MUL0"
+    name: mulesoft-comms-integration
+    purpose: techsupport
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: null
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Comms + Mulesoft BSS/OSS integration patterns (Amdocs CES, Ericsson BSCS, Oracle BRM, Netcracker). Tier-B per cross-claim mitigation; mulesoft-expert claims Tier-A. v1.0.0 seed."
+
+  - id: "C0CC0AGF0"
+    name: einstein-agentforce
+    purpose: announcements
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: null
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Agentforce platform channel; Comms Cloud-relevant Vibes skills (retention, billing-explainer, subscriber-service) surface here. Tier-B per cross-claim mitigation; agentforce-expert claims Tier-A. **Subscriber-data scope is endemic; the persona renders the §3.4 CPNI / customer-privacy boundary block whenever a sourced claim from this channel touches subscriber-data design.** v1.0.0 seed."
+
+  - id: "C0A693YH82H"
+    name: omnistudio-support
+    purpose: techsupport
+    sub_vertical: heritage
+    member_count: null
+    member_count_checked_at: null
+    tier: C
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-21T04:49:17Z"
+    last_material_change_summary: "Active Spring '26 OmniStudio churn channel (created 2026-01-01 specifically for 'Addressing Concerns Regarding Omnistudio Changes for Spring 26'). OmniScript edit block null-value override workaround question. CLI active OS/IP/FC component pull for Copado branch commits."
+    notes: "Spring '26 OmniStudio support / employee channel. Resolved 2026-05-25 from seed-ledger placeholder name `vlocity-comms-legacy` (closer fit — OmniStudio Spring '26 churn is the active heritage-migration motion, not a legacy-Vlocity-Comms-specific channel). Tier-C ambient by sub-vertical/heritage disambiguation. T2 should monitor for Spring '26 → Summer '26 churn carryover. Vlocity-heritage migration motion has NOT concluded; ledger entry remains active per R2 standing concern."

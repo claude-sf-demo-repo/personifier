@@ -1,0 +1,108 @@
+# Informatica IDMC Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+#
+# Seeded at Phase 3 Task 3.5 (2026-05-23) with placeholder C-IDs and member counts;
+# the foundation-skill wrappers' first authenticated Slack search resolves real
+# values and bumps `last_checked_at` / `last_material_change_at`.
+
+channels:
+  - id: C09TDQHN4LD
+    name: help-sell-informatica
+    purpose: help
+    member_count: pending
+    member_count_checked_at: "2026-05-25T06:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Informatica IDMC help-sell channel (created 2025-11-18 by Simon Goddard for product + marketing-related questions; redirects other queries to #informatica-gtm-faq). Resolved 2026-05-25 from seed-ledger placeholder name `informatica-help`. Tier-A by purpose=help-sell. Brand overlay: 'Informatica IDMC' canonical; never 'Salesforce Informatica'."
+
+  - id: C-PLACEHOLDER-INFORMATICA-ANNOUNCEMENTS
+    name: informatica-announcements
+    purpose: announcements
+    member_count: pending
+    member_count_checked_at: "2026-05-23T12:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-23T12:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Broadcast channel for Informatica IDMC release announcements. T1 daily refresh starts here."
+
+  - id: C0ARPPT2MT7
+    name: org-cdam-all
+    purpose: techsupport
+    member_count: pending
+    member_count_checked_at: "2026-05-25T06:00:00Z"
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-22T21:50:11Z"
+    last_material_change_summary: "Power BI pushdown enforcement prerequisites doc error in CDAM (Cloud Data Access Management): step (9) UDF creation permission is invalid Power BI syntax — likely doc copy-and-paste from another connector. Tony Vinciguerra to fix once Vinodh Kumar Kadambala validates."
+    notes: "CDAM (Cloud Data Access Management) in IDMC channel. Resolved 2026-05-25 from seed-ledger placeholder name `informatica-idmc` (closer fit by data-access-management techsupport scope). Tier-A — platform-themed for IDMC tenant model, Secure Agent runtime, control-plane / data-plane discussions."
+
+  - id: C-PLACEHOLDER-INFORMATICA-MDM
+    name: informatica-mdm
+    purpose: techsupport
+    member_count: pending
+    member_count_checked_at: "2026-05-23T12:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-23T12:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "MDM-themed channel for golden-record / match-merge / hierarchy / multidomain discussions."
+
+  - id: C-PLACEHOLDER-INFORMATICA-DATA-360-INTEGRATION
+    name: informatica-data-360-integration
+    purpose: techsupport
+    member_count: pending
+    member_count_checked_at: "2026-05-23T12:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-23T12:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Canonical FD8 partner-cloud post-acquisition combo channel. Tier-B claim — data360-expert likely holds Tier-A by cross-fleet collision rule (design-spec §12 R5)."
+
+  - id: C-PLACEHOLDER-INFORMATICA-CLAIRE-AI
+    name: informatica-claire-ai
+    purpose: community
+    member_count: pending
+    member_count_checked_at: "2026-05-23T12:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-23T12:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "CLAIRE AI + GenAI channel; cited when an opportunity touches CLAIRE GPT, CLAIRE Copilot, AI-driven catalog enrichment, or GenAI-assisted DQ."
+
+  - id: C-PLACEHOLDER-INFORMATICA-DATA-INTEGRATION
+    name: informatica-data-integration
+    purpose: techsupport
+    member_count: pending
+    member_count_checked_at: "2026-05-23T12:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-23T12:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Cloud Data Integration channel — mapping, taskflows, pushdown optimisation."
+
+  - id: C-PLACEHOLDER-INFORMATICA-DATA-QUALITY
+    name: informatica-data-quality
+    purpose: techsupport
+    member_count: pending
+    member_count_checked_at: "2026-05-23T12:00:00Z"
+    tier: B
+    last_checked_at: "2026-05-23T12:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Cloud Data Quality channel — DQ rules, profiling, scorecards."
+
+  - id: C-PLACEHOLDER-POWERCENTER-MODERNISATION
+    name: powercenter-modernisation
+    purpose: community
+    member_count: pending
+    member_count_checked_at: "2026-05-23T12:00:00Z"
+    tier: C
+    last_checked_at: "2026-05-23T12:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Legacy on-prem PowerCenter → IDMC migration discussions. Tier-C unless member count surprises upward — load-bearing for PowerCenter-vs-IDMC disambiguation (R4)."

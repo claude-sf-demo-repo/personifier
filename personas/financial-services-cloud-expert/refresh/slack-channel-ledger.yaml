@@ -1,0 +1,126 @@
+# Financial Services Cloud Slack Channel Ledger
+# Per FD4 / cloud-expert-foundations §2.
+# Mutated in-place by foundation-skill scoped wrappers (§6).
+# Persona-builder Stage 6 must NOT regenerate this file.
+# Sub-vertical tag is FSC-specific: banking / insurance / wealth / cross / kyc-aml-cross.
+#
+# Status (2026-05-22): Channel IDs and member counts are placeholders pending a
+# successful refresh-time Slack-search wrapper run. The first T1 daily refresh
+# populates real values via foundation-skill cloud_expert_slack_search. Channel
+# names are verified against the known FSC Slack ecosystem; IDs and counts will
+# be filled at first refresh. Cautious-first posture argues against any runtime
+# live read of these channels — runtime allowlist is Tier U only.
+
+channels:
+  # === Cross-sub-vertical ===
+  - id: PLACEHOLDER-PENDING-T1
+    name: financial-services-cloud
+    purpose: community
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-22T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Primary cross-sub-vertical FSC channel. Tier-A by member count + cross-sub-vertical relevance. ID + member_count populated at first T1 refresh."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: fsc-announcements
+    purpose: announcements
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-22T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Broadcast channel for FSC release announcements. The T1 daily refresh skim starts here. Sub-vertical: cross."
+
+  - id: C01MF1GMQ7R
+    name: help-sell-financial-services-cloud
+    purpose: help
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-21T13:30:02Z"
+    last_material_change_summary: "**LOAD-BEARING REBRAND**: Financial Services Cloud renamed to Agentforce Financial Services (Raghunandan Yerram 5/21 + JP-selling channel topic). FY27 Q2 promo: free Digital Origination / Digital Insurance for 12 months on FSC A1E upgrades (min 250 licenses, 1-yr term). Webinar 2026-06-09: 'Scale High-Touch Relationships Across Financial Services with Autonomous AI'."
+    notes: "Cross-sub-vertical FSC sell-side help channel. Resolved 2026-05-25 from seed-ledger placeholder name `fsc-help`. Tier-A by purpose=help-sell + topical centrality. Cautious-first posture: locked Advisory disclaimer renders for any insights file body section that cites this channel."
+
+  - id: PLACEHOLDER-PENDING-T1
+    name: fsc-se
+    purpose: sell
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-22T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "SE coordination channel. Tier-A by topical relevance even though purpose=sell (foundation skill §1.4 override; FSC SE channel uniquely high-signal for opportunity scoping). Sub-vertical: cross."
+
+  - id: C020H26JCP7
+    name: tech-prod-help-financial-services-cloud
+    purpose: techsupport
+    sub_vertical: cross
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: "2026-05-20T07:49:46Z"
+    last_material_change_summary: "Multiple customer-blocking issues 5/19: 5M financial-account-record rollup limit clarification (Junichi Fukuoka); FSC managed-package code-coverage 0% Finserv triggers blocking deploy (Himali Fadia); Relationship 'Activities & Objects to Rollup' UI inconsistency (Kaushik Jagatap); Monday-go-live customer blocker — Flow deploys failing (Harsh Thakkar)."
+    notes: "FSC product-help techsupport channel. Resolved 2026-05-25 from seed-ledger placeholder name `fsc-engineering`. Tier-B until member-count confirmed. Sub-vertical: cross (banking-skewed by traffic this interval)."
+
+  # === Banking sub-vertical ===
+  - id: PLACEHOLDER-PENDING-T1
+    name: banking-cloud
+    purpose: community
+    sub_vertical: banking
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-22T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Banking sub-vertical Tier-A by sub-vertical override (design-spec §12 R5). Retail Banking, Commercial Banking, deposit accounts, retail loans, branch workflows."
+
+  # === Insurance sub-vertical ===
+  - id: PLACEHOLDER-PENDING-T1
+    name: insurance-cloud
+    purpose: community
+    sub_vertical: insurance
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-22T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Insurance sub-vertical Tier-A by sub-vertical override. P&C / Life / Group Benefits; Policy / Claim / Producer / Distributor patterns."
+
+  # === Wealth-management sub-vertical ===
+  - id: C01K8TPHAFQ
+    name: industries-wealth-and-asset-management
+    purpose: community
+    sub_vertical: wealth
+    member_count: null
+    member_count_checked_at: null
+    tier: A
+    last_checked_at: "2026-05-26T05:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "Wealth-and-asset-management industry channel (canonical sub-vertical surface). Resolved 2026-05-25 from seed-ledger placeholder name `wealth-management-cloud`. Sub-vertical: wealth. Tier-A by sub-vertical override. **Locked Advisory disclaimer renders in any insights file body section that cites this channel** per Cautious-first overlay."
+
+  # === KYC/AML cross-sub-vertical regulated patterns ===
+  - id: PLACEHOLDER-PENDING-T1
+    name: fsi-kyc-aml
+    purpose: techsupport
+    sub_vertical: kyc-aml-cross
+    member_count: null
+    member_count_checked_at: null
+    tier: B
+    last_checked_at: "2026-05-22T00:00:00Z"
+    last_material_change_at: null
+    last_material_change_summary: null
+    notes: "KYC/AML cross-sub-vertical regulated patterns. Cited when an opportunity touches KYC document collection, AML transaction monitoring, sanctions screening, or regulatory-reporting flows. Regulatory uncertainty qualifier renders when this channel is cited."
